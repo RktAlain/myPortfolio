@@ -2,33 +2,54 @@
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ExternalLink, Github, Database, Brain, TrendingUp } from 'lucide-react';
+import { ExternalLink, Github, Database, Brain, TrendingUp, Trophy, Code } from 'lucide-react';
 
 const Projects = () => {
   const projects = [
     {
-      title: "Prédiction de Churn Client",
-      description: "Modèle de machine learning développé avec KNIME pour prédire l'attrition client dans le secteur des télécommunications. Amélioration de 25% de la rétention client.",
-      technologies: ["KNIME", "Python", "Scikit-learn", "XGBoost"],
-      icon: Brain,
-      gradient: "from-blue-600 to-purple-600",
-      features: ["Accuracy: 92%", "ROC-AUC: 0.89", "Feature Engineering", "Cross-validation"]
+      title: "EMIHACK 3.0 - 2ème Place",
+      description: "Application de gestion d'épidémies avec Big Data et Intelligence Artificielle. Projet primé lors du hackathon national de l'EMIT en 2024.",
+      technologies: ["Python", "IA", "Big Data", "Data Analysis"],
+      icon: Trophy,
+      gradient: "from-yellow-600 to-orange-600",
+      features: ["Prix du développement", "Analyse prédictive", "Interface intuitive", "Traitement Big Data"],
+      year: "2024"
     },
     {
-      title: "Dashboard Analytics E-commerce",
-      description: "Développement d'un tableau de bord interactif pour analyser les performances de vente et identifier les tendances du marché en temps réel.",
-      technologies: ["Tableau", "SQL", "Python", "PostgreSQL"],
-      icon: TrendingUp,
-      gradient: "from-emerald-600 to-teal-600",
-      features: ["Real-time data", "KPI tracking", "Automated reports", "Mobile responsive"]
-    },
-    {
-      title: "Analyse Sentiment Réseaux Sociaux",
-      description: "Pipeline d'analyse de sentiment sur les données Twitter pour une marque internationale, utilisant du NLP avancé et des techniques de deep learning.",
-      technologies: ["Python", "NLTK", "TensorFlow", "Apache Kafka"],
+      title: "Système de Gestion Documentaire",
+      description: "Application complète de centre de documentation développée lors de mon stage chez Assurance Aro Antananarivo.",
+      technologies: ["React", "Node.js", "MySQL", "API REST"],
       icon: Database,
-      gradient: "from-orange-600 to-red-600",
-      features: ["NLP Pipeline", "Real-time processing", "Sentiment scoring", "Trend analysis"]
+      gradient: "from-blue-600 to-purple-600",
+      features: ["Interface moderne", "Gestion complète", "API sécurisée", "Base de données optimisée"],
+      year: "2023-2024"
+    },
+    {
+      title: "Application Desktop SAV",
+      description: "Système de gestion des Services Après-vente développé avec Java pour Computer Store durant mon stage de 3ème année.",
+      technologies: ["Java", "Swing", "MySQL", "Desktop"],
+      icon: Code,
+      gradient: "from-emerald-600 to-teal-600",
+      features: ["Interface desktop", "Gestion clientèle", "Suivi commandes", "Rapports automatisés"],
+      year: "2022-2023"
+    },
+    {
+      title: "EMIHACK 2.0 - Application Web",
+      description: "Plateforme web pour la gestion du suivi de vente de vin développée lors du hackathon interne de l'EMIT.",
+      technologies: ["HTML", "CSS", "JavaScript", "PHP"],
+      icon: TrendingUp,
+      gradient: "from-purple-600 to-pink-600",
+      features: ["Suivi des ventes", "Dashboard analytique", "Interface responsive", "Gestion stocks"],
+      year: "2021-2022"
+    },
+    {
+      title: "Portfolio & Anti-Incendie",
+      description: "Application web statique portfolio et système de lutte contre le feu de brousse développés lors du Summer-code.",
+      technologies: ["HTML", "CSS", "JavaScript", "Responsive"],
+      icon: Brain,
+      gradient: "from-red-600 to-pink-600",
+      features: ["Design moderne", "Responsive design", "Performance optimisée", "UX/UI soigné"],
+      year: "2021-2022"
     }
   ];
 
@@ -41,18 +62,21 @@ const Projects = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-600 mx-auto mb-8"></div>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Découvrez quelques-uns de mes projets les plus impactants en Data Science
+            Découvrez mes réalisations en Data Science et développement fullstack
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
+        <div className="grid lg:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <Card key={index} className="bg-white/5 border-white/10 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 group">
               <CardHeader className="text-center pb-4">
-                <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r ${project.gradient} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                  <project.icon className="h-8 w-8 text-white" />
+                <div className="flex items-center justify-between mb-4">
+                  <div className={`w-16 h-16 rounded-full bg-gradient-to-r ${project.gradient} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                    <project.icon className="h-8 w-8 text-white" />
+                  </div>
+                  <span className="text-purple-400 font-semibold text-sm">{project.year}</span>
                 </div>
-                <CardTitle className="text-white text-xl">{project.title}</CardTitle>
+                <CardTitle className="text-white text-xl text-left">{project.title}</CardTitle>
               </CardHeader>
               
               <CardContent className="space-y-4">

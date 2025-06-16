@@ -36,19 +36,19 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      value: "rohit.kumar@email.com",
-      link: "mailto:rohit.kumar@email.com"
+      value: "rakotomalalasoheryalain@gmail.com",
+      link: "mailto:rakotomalalasoheryalain@gmail.com"
     },
     {
       icon: Phone,
       title: "Téléphone",
-      value: "+33 6 XX XX XX XX",
-      link: "tel:+33xxxxxxxxx"
+      value: "034 66 974 37",
+      link: "tel:+261346697437"
     },
     {
       icon: MapPin,
       title: "Localisation",
-      value: "Paris, France",
+      value: "Imandry Fianarantsoa, Madagascar",
       link: "#"
     }
   ];
@@ -62,7 +62,7 @@ const Contact = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-600 mx-auto mb-8"></div>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Discutons de vos projets Data Science et de la façon dont je peux vous aider
+            Discutons de vos projets Data Science ou de développement web
           </p>
         </div>
 
@@ -72,8 +72,8 @@ const Contact = () => {
             <div>
               <h3 className="text-2xl font-bold text-white mb-6">Restons en contact</h3>
               <p className="text-gray-300 text-lg leading-relaxed mb-8">
-                Je suis toujours ouvert aux nouvelles opportunités et collaborations passionnantes. 
-                N'hésitez pas à me contacter pour discuter de vos projets de Data Science !
+                Diplômé de l'EMIT et passionné par l'innovation technologique, je suis toujours ouvert aux nouvelles 
+                opportunités et collaborations. N'hésitez pas à me contacter pour discuter de vos projets !
               </p>
             </div>
 
@@ -94,7 +94,7 @@ const Contact = () => {
             </div>
 
             <div className="flex space-x-4 pt-8">
-              <a href="https://linkedin.com/in/rohit-kumar" target="_blank" rel="noopener noreferrer"
+              <a href="https://linkedin.com/in/solohery-alain" target="_blank" rel="noopener noreferrer"
                  className="w-12 h-12 bg-white/10 hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-600 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110">
                 <Linkedin className="h-6 w-6 text-white" />
               </a>
@@ -102,6 +102,15 @@ const Contact = () => {
                  className="w-12 h-12 bg-white/10 hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-600 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110">
                 <Github className="h-6 w-6 text-white" />
               </a>
+            </div>
+
+            <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 p-6 rounded-xl border border-purple-500/30">
+              <h3 className="text-xl font-bold text-white mb-4">Formation</h3>
+              <div className="text-gray-300 space-y-2">
+                <p><strong>2025 :</strong> Master en Sciences des Données et IA - EMIT</p>
+                <p><strong>2024 :</strong> Licence professionnelle en Informatique - EMIT</p>
+                <p><strong>2020 :</strong> Baccalauréat série D - Lycée Privé Arc en Ciel</p>
+              </div>
             </div>
           </div>
 
@@ -168,7 +177,7 @@ const Contact = () => {
           <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 p-8 rounded-xl border border-purple-500/30">
             <h3 className="text-2xl font-bold text-white mb-4">Prêt à collaborer ?</h3>
             <p className="text-gray-300 text-lg mb-6">
-              Transformons vos données en insights stratégiques ensemble !
+              Transformons vos idées en solutions innovantes ensemble !
             </p>
             <Button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-3 rounded-full">
               Démarrons un projet

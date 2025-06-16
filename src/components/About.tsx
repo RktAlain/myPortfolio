@@ -1,29 +1,29 @@
 
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Brain, Database, TrendingUp, Users } from 'lucide-react';
+import { Brain, Database, Code, TrendingUp } from 'lucide-react';
 
 const About = () => {
   const highlights = [
     {
       icon: Brain,
-      title: "Machine Learning",
-      description: "Développement de modèles prédictifs avancés"
+      title: "Data Science",
+      description: "KNIME, Python, R et Machine Learning"
+    },
+    {
+      icon: Code,
+      title: "Développement Web",
+      description: "React, Node.js, Java Spring Boot"
     },
     {
       icon: Database,
-      title: "Big Data",
-      description: "Traitement et analyse de données massives"
+      title: "Bases de Données",
+      description: "MySQL, PostgreSQL, MongoDB"
     },
     {
       icon: TrendingUp,
       title: "Analytics",
       description: "Visualisation et insights métier"
-    },
-    {
-      icon: Users,
-      title: "Collaboration",
-      description: "Travail en équipe et communication des résultats"
     }
   ];
 
@@ -40,25 +40,22 @@ const About = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <p className="text-lg text-gray-300 leading-relaxed">
-              Data Scientist passionné avec une solide expertise en analyse de données et en apprentissage automatique. 
-              Je transforme les données complexes en insights stratégiques pour aider les entreprises à prendre des décisions éclairées.
+              Diplômé de l'EMIT en Sciences des Données et Intelligence Artificielle, je suis un professionnel polyvalent 
+              alliant expertise en Data Science et développement fullstack. Ma passion pour l'innovation technologique 
+              me pousse à créer des solutions complètes et performantes.
             </p>
             
             <p className="text-lg text-gray-300 leading-relaxed">
-              Ma spécialisation en <span className="text-purple-400 font-semibold">KNIME</span> me permet de créer 
-              des workflows analytiques sophistiqués, tandis que ma maîtrise de Python, R et des technologies 
-              de visualisation me donne une approche complète de la science des données.
+              Fort d'une expérience diversifiée acquise lors de hackathons (EMIHACK 3.0 - 2ème place) et de stages 
+              professionnels, je maîtrise l'ensemble de la chaîne de développement : de l'analyse de données 
+              à la mise en production d'applications web modernes.
             </p>
             
             <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 p-6 rounded-lg border border-purple-500/30">
-              <h3 className="text-xl font-semibold text-white mb-3">Expertise clé :</h3>
-              <ul className="text-gray-300 space-y-2">
-                <li>• Modélisation prédictive et Machine Learning</li>
-                <li>• Analyse statistique avancée avec R et Python</li>
-                <li>• Workflows analytiques avec KNIME</li>
-                <li>• Visualisation de données (Tableau, Power BI)</li>
-                <li>• Big Data et bases de données (SQL, NoSQL)</li>
-              </ul>
+              <h3 className="text-xl font-semibold text-white mb-3">Localisation :</h3>
+              <p className="text-gray-300">📍 Imandry Fianarantsoa, Madagascar</p>
+              <p className="text-gray-300">📞 034 66 974 37</p>
+              <p className="text-gray-300">✉️ rakotomalalasoheryalain@gmail.com</p>
             </div>
           </div>
 

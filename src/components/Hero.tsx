@@ -78,17 +78,17 @@ const Hero = () => {
         <div className="animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
-              Rohit Kumar
+              RAKOTOMALALA Solohery Alain
             </span>
           </h1>
           
           <div className="text-xl md:text-2xl text-gray-300 mb-8 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-            <span className="typing-animation">Data Scientist & Analytics Expert</span>
+            <span className="typing-animation">Data Scientist & Développeur Fullstack</span>
           </div>
           
           <p className="text-lg text-gray-400 mb-8 max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '0.6s' }}>
-            Spécialiste en science des données avec une expertise en KNIME, Python, R et Machine Learning. 
-            Passionné par la transformation des données en insights stratégiques.
+            Spécialiste en Data Science avec KNIME, Python, R et développement web fullstack. 
+            Expert en transformation de données complexes en insights stratégiques.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 animate-fade-in" style={{ animationDelay: '0.9s' }}>
@@ -102,11 +102,11 @@ const Hero = () => {
                  className="p-3 bg-white/10 hover:bg-white/20 rounded-full transition-all duration-300 transform hover:scale-110">
                 <Github className="h-6 w-6 text-white" />
               </a>
-              <a href="https://linkedin.com/in/rohit-kumar" target="_blank" rel="noopener noreferrer"
+              <a href="https://linkedin.com/in/solohery-alain" target="_blank" rel="noopener noreferrer"
                  className="p-3 bg-white/10 hover:bg-white/20 rounded-full transition-all duration-300 transform hover:scale-110">
                 <Linkedin className="h-6 w-6 text-white" />
               </a>
-              <a href="mailto:rohit.kumar@email.com"
+              <a href="mailto:rakotomalalasoheryalain@gmail.com"
                  className="p-3 bg-white/10 hover:bg-white/20 rounded-full transition-all duration-300 transform hover:scale-110">
                 <Mail className="h-6 w-6 text-white" />
               </a>
