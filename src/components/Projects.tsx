@@ -2,17 +2,17 @@
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ExternalLink, Github, Database, Brain, TrendingUp, Trophy, Code, Award } from 'lucide-react';
+import { ExternalLink, Github, Database, Brain, TrendingUp, Trophy, Code, Award, ShoppingCart } from 'lucide-react';
 
 const Projects = () => {
   const experiences = [
     {
-      title: "Participation à l'EMIHACK 3.0",
-      description: "Obtention du prix de 2e place dans la catégorie du développement - Création d'une application de gestion d'épidémies incluant Big Data et Intelligence Artificielle.",
-      technologies: ["Big Data", "Intelligence Artificielle", "Data Science", "Machine Learning"],
-      icon: Trophy,
-      gradient: "from-yellow-600 to-orange-600",
-      features: ["Prix de développement", "Gestion épidémies", "Big Data intégré", "IA appliquée"],
+      title: "Participation au Hackathon Recrutement Access Développement HUB",
+      description: "Hackathon de recrutement - Refonte du processus d'achat de matériel dans une entreprise avec création d'une solution complète.",
+      technologies: ["Processus d'achat", "Gestion d'entreprise", "Innovation", "Solution digitale"],
+      icon: ShoppingCart,
+      gradient: "from-green-600 to-blue-600",
+      features: ["Refonte processus achat", "Solution entreprise", "Innovation digitale", "Hackathon recrutement"],
       year: "2024-2025"
     },
     {
@@ -106,7 +106,7 @@ const Projects = () => {
                     <Github className="h-4 w-4 mr-2" />
                     Code
                   </Button>
-                  <Button size="sm" variant="outline" className="flex-1 border-white/20 text-white hover:bg-white/10">
+                  <Button size="sm" variant="outline" className="flex-1 border-white/20 text-black hover:bg-white/10 hover:text-black">
                     <ExternalLink className="h-4 w-4 mr-2" />
                     Demo
                   </Button>
