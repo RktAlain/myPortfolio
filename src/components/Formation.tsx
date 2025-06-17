@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { GraduationCap, Calendar, MapPin, Users, Trophy, Code } from 'lucide-react';
+import { GraduationCap, Calendar, MapPin, Users, Trophy, Code, Award } from 'lucide-react';
 
 const Formation = () => {
   const formations = [
@@ -10,20 +9,60 @@ const Formation = () => {
       institution: "EMIT - École des Mines et des Industries Technologique",
       period: "2025",
       location: "Fianarantsoa, Madagascar",
-      specialization: "Sciences des Données et Intelligence Artificielle",
+      specialization: "Sciences de Données et Intelligence Artificielle",
       description: "Formation avancée en Data Science, Machine Learning et développement d'applications intelligentes",
       color: "from-blue-500 to-indigo-600",
       icon: GraduationCap
     },
     {
-      title: "Licence en Informatique",
-      institution: "EMIT - École des Mines et des Industries Technologique",
-      period: "2021 - 2024",
+      title: "Licence Professionnelle en Informatique",
+      institution: "EMIT",
+      period: "2024",
       location: "Fianarantsoa, Madagascar",
       specialization: "Développement d'Application Internet/Intranet",
       description: "Formation complète en développement web, programmation et gestion de projets informatiques",
       color: "from-purple-500 to-pink-600",
       icon: Code
+    },
+    {
+      title: "Diplôme DELF B2",
+      institution: "Alliance Française de Fianarantsoa",
+      period: "2024",
+      location: "Fianarantsoa, Madagascar",
+      specialization: "Français Langue Étrangère",
+      description: "Certification de compétence en langue française niveau intermédiaire avancé",
+      color: "from-green-500 to-emerald-600",
+      icon: Award
+    },
+    {
+      title: "Deuxième Année de Licence en Informatique",
+      institution: "EMIT",
+      period: "2023",
+      location: "Fianarantsoa, Madagascar",
+      specialization: "Développement d'Application Internet/Intranet",
+      description: "Approfondissement des connaissances en programmation et développement web",
+      color: "from-cyan-500 to-blue-600",
+      icon: Code
+    },
+    {
+      title: "Première Année de Licence en Informatique",
+      institution: "EMIT",
+      period: "2022",
+      location: "Fianarantsoa, Madagascar",
+      specialization: "Développement d'Application Internet/Intranet",
+      description: "Bases fondamentales de l'informatique et introduction au développement",
+      color: "from-indigo-500 to-purple-600",
+      icon: Code
+    },
+    {
+      title: "Formation en Cybersécurité",
+      institution: "Cisco",
+      period: "2021",
+      location: "Formation en ligne",
+      specialization: "Attestation de fin de formation",
+      description: "Formation complète sur les fondamentaux de la cybersécurité et protection des systèmes",
+      color: "from-red-500 to-pink-600",
+      icon: Trophy
     },
     {
       title: "Baccalauréat série D",
@@ -32,7 +71,7 @@ const Formation = () => {
       location: "Toliara, Madagascar",
       specialization: "Sciences et Technologies",
       description: "Formation scientifique avec spécialisation en mathématiques et sciences physiques",
-      color: "from-green-500 to-emerald-600",
+      color: "from-yellow-500 to-orange-600",
       icon: Trophy
     }
   ];
