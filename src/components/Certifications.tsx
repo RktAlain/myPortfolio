@@ -1,12 +1,10 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Award, Calendar, ExternalLink, ChevronDown, ChevronUp, Eye } from 'lucide-react';
+import { Award, Calendar, Eye } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Certifications = () => {
-  const [showCertifications, setShowCertifications] = useState(false);
-
   const certifications = [
     {
       title: "Licence en Sciences des Données et Intelligence Artificielle",
@@ -15,7 +13,8 @@ const Certifications = () => {
       type: "Diplôme",
       description: "Formation complète en Data Science, Machine Learning et développement d'applications intelligentes",
       status: "Obtenu",
-      color: "from-blue-500 to-indigo-600"
+      color: "from-blue-500 to-indigo-600",
+      certificateImage: "" // Vous pourrez ajouter l'image ici
     },
     {
       title: "Certification KNIME Analytics Platform",
@@ -24,7 +23,8 @@ const Certifications = () => {
       type: "Certification",
       description: "Maîtrise avancée de la plateforme KNIME pour l'analyse de données et le machine learning",
       status: "Certifié",
-      color: "from-green-500 to-emerald-600"
+      color: "from-green-500 to-emerald-600",
+      certificateImage: "" // Vous pourrez ajouter l'image ici
     },
     {
       title: "Attestation Hackathon EMIHACK 3.0",
@@ -33,7 +33,8 @@ const Certifications = () => {
       type: "Attestation",
       description: "2ème place au hackathon - Développement d'une solution innovante en équipe",
       status: "2ème Place",
-      color: "from-yellow-500 to-orange-600"
+      color: "from-yellow-500 to-orange-600",
+      certificateImage: "" // Vous pourrez ajouter l'image ici
     },
     {
       title: "Formation Développement Web Fullstack",
@@ -42,7 +43,8 @@ const Certifications = () => {
       type: "Compétence",
       description: "Maîtrise de React, Node.js, Java Spring Boot, PHP Laravel et bases de données",
       status: "Maîtrisé",
-      color: "from-purple-500 to-pink-600"
+      color: "from-purple-500 to-pink-600",
+      certificateImage: "" // Vous pourrez ajouter l'image ici
     },
     {
       title: "Attestation Formation Cybersécurité",
@@ -51,9 +53,16 @@ const Certifications = () => {
       type: "Attestation",
       description: "Formation en ligne sur les fondamentaux de la cybersécurité",
       status: "Obtenu",
-      color: "from-red-500 to-pink-600"
+      color: "from-red-500 to-pink-600",
+      certificateImage: "" // Vous pourrez ajouter l'image ici
     }
   ];
+
+  const handleViewCertificate = (cert) => {
+    // Fonction pour voir le certificat - vous pourrez l'implémenter selon vos besoins
+    console.log(`Voir le certificat de: ${cert.title}`);
+    // Ici vous pourrez ouvrir une modal ou naviguer vers l'image du certificat
+  };
 
   return (
     <section id="certifications" className="py-20 px-4 bg-gradient-to-b from-purple-900/30 to-slate-900/50">
@@ -66,68 +75,60 @@ const Certifications = () => {
           <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-8">
             Formations et certifications qui attestent de mon expertise technique
           </p>
-          
-          {/* Button to toggle certifications */}
-          <Button 
-            onClick={() => setShowCertifications(!showCertifications)}
-            className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105 mb-8"
-          >
-            <Eye className="mr-2 h-5 w-5" />
-            {showCertifications ? 'Masquer' : 'Voir'} les Certifications
-            {showCertifications ? <ChevronUp className="ml-2 h-5 w-5" /> : <ChevronDown className="ml-2 h-5 w-5" />}
-          </Button>
         </div>
 
-        {/* Certifications Grid with Animation */}
-        <div className={`transition-all duration-700 ease-in-out ${
-          showCertifications 
-            ? 'opacity-100 max-h-none transform translate-y-0' 
-            : 'opacity-0 max-h-0 transform -translate-y-10 overflow-hidden'
-        }`}>
-          <div className="grid md:grid-cols-2 gap-8 mb-8">
-            {certifications.map((cert, index) => (
-              <Card 
-                key={index} 
-                className="bg-white/5 border-white/10 hover:bg-white/10 transition-all duration-500 transform hover:scale-105 group"
-                style={{
-                  animationDelay: showCertifications ? `${index * 0.1}s` : '0s'
-                }}
-              >
-                <CardHeader className="pb-4">
-                  <div className="flex items-start justify-between">
-                    <div className="flex items-center space-x-3">
-                      <div className={`p-3 rounded-full bg-gradient-to-r ${cert.color} transform group-hover:rotate-12 transition-transform duration-300`}>
-                        <Award className="h-6 w-6 text-white" />
-                      </div>
-                      <div>
-                        <CardTitle className="text-white text-lg group-hover:text-purple-300 transition-colors">
-                          {cert.title}
-                        </CardTitle>
-                        <p className="text-purple-400 font-medium">{cert.institution}</p>
-                      </div>
+        {/* Certifications Grid */}
+        <div className="grid md:grid-cols-2 gap-8 mb-8">
+          {certifications.map((cert, index) => (
+            <Card 
+              key={index} 
+              className="bg-white/5 border-white/10 hover:bg-white/10 transition-all duration-500 transform hover:scale-105 group animate-fade-in"
+              style={{
+                animationDelay: `${index * 0.1}s`
+              }}
+            >
+              <CardHeader className="pb-4">
+                <div className="flex items-start justify-between">
+                  <div className="flex items-center space-x-3">
+                    <div className={`p-3 rounded-full bg-gradient-to-r ${cert.color} transform group-hover:rotate-12 transition-transform duration-300`}>
+                      <Award className="h-6 w-6 text-white" />
                     </div>
-                    <span className={`px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${cert.color} text-white transform group-hover:scale-110 transition-transform duration-300`}>
-                      {cert.status}
-                    </span>
+                    <div>
+                      <CardTitle className="text-white text-lg group-hover:text-purple-300 transition-colors">
+                        {cert.title}
+                      </CardTitle>
+                      <p className="text-purple-400 font-medium">{cert.institution}</p>
+                    </div>
                   </div>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="flex items-center text-gray-400 text-sm">
-                    <Calendar className="h-4 w-4 mr-2" />
-                    {cert.date}
-                  </div>
-                  <p className="text-gray-300 leading-relaxed">
-                    {cert.description}
-                  </p>
-                  <div className="flex items-center justify-between pt-2">
-                    <span className="text-xs bg-white/10 px-2 py-1 rounded-full text-gray-300">
-                      {cert.type}
-                    </span>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+                  <span className={`px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${cert.color} text-white transform group-hover:scale-110 transition-transform duration-300`}>
+                    {cert.status}
+                  </span>
+                </div>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="flex items-center text-gray-400 text-sm">
+                  <Calendar className="h-4 w-4 mr-2" />
+                  {cert.date}
+                </div>
+                <p className="text-gray-300 leading-relaxed">
+                  {cert.description}
+                </p>
+                <div className="flex items-center justify-between pt-2">
+                  <span className="text-xs bg-white/10 px-2 py-1 rounded-full text-gray-300">
+                    {cert.type}
+                  </span>
+                  <Button 
+                    onClick={() => handleViewCertificate(cert)}
+                    className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-4 py-2 rounded-full transition-all duration-300 transform hover:scale-105"
+                    size="sm"
+                  >
+                    <Eye className="mr-2 h-4 w-4" />
+                    Voir le certificat
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
         </div>
 
         {/* Summary Section */}
