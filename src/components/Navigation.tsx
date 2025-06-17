@@ -18,6 +18,7 @@ const Navigation = () => {
     { href: '#home', label: 'Accueil' },
     { href: '#about', label: 'À propos' },
     { href: '#skills', label: 'Compétences' },
+    { href: '#formation', label: 'Formation' },
     { href: '#projects', label: 'Projets' },
     { href: '#certifications', label: 'Certifications' },
     { href: '#contact', label: 'Contact' },
