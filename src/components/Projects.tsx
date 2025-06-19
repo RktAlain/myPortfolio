@@ -1,11 +1,21 @@
-
-import React from 'react';
+import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ExternalLink, Github, Database, Brain, TrendingUp, Trophy, Code, Award, ShoppingCart } from 'lucide-react';
+import { ExternalLink, Github, Database, Brain, TrendingUp, Trophy, Code, Award, ShoppingCart, ChevronDown, ChevronUp } from 'lucide-react';
 
 const Projects = () => {
+  const [showAll, setShowAll] = useState(false);
+  
   const experiences = [
+    {
+      title: "Participation à l'EMHACK 3.0 (2ème place en développement)",
+      description: "Hackathon EMHACK 3.0 - Création d'une application de gestion d'épidémies utilisant Big Data et Intelligence Artificielle.",
+      technologies: ["Big Data", "Intelligence Artificielle", "Gestion d'épidémies", "Développement d'application"],
+      icon: Trophy,
+      gradient: "from-yellow-600 to-orange-600",
+      features: ["Application de gestion", "Analyse de données", "Solution innovante", "Prix du 2ème place"],
+      year: "2024-2025"
+    },
     {
       title: "Participation au Hackathon Recrutement Access Développement HUB",
       description: "Hackathon de recrutement - Refonte du processus d'achat de matériel dans une entreprise avec création d'une solution complète.",
@@ -53,6 +63,8 @@ const Projects = () => {
     }
   ];
 
+  const visibleExperiences = showAll ? experiences : experiences.slice(0, 4);
+
   return (
     <section id="projects" className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
@@ -67,7 +79,7 @@ const Projects = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8">
-          {experiences.map((experience, index) => (
+          {visibleExperiences.map((experience, index) => (
             <Card key={index} className="bg-white/5 border-white/10 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 group">
               <CardHeader className="text-center pb-4">
                 <div className="flex items-center justify-between mb-4">
@@ -115,6 +127,28 @@ const Projects = () => {
             </Card>
           ))}
         </div>
+
+        {experiences.length > 4 && (
+          <div className="mt-8 text-center">
+            <Button 
+              onClick={() => setShowAll(!showAll)}
+              variant="outline" 
+              className="border-white/20 text-black hover:bg-white/10"
+            >
+              {showAll ? (
+                <>
+                  <ChevronUp className="mr-2 h-4 w-4" />
+                  Voir moins
+                </>
+              ) : (
+                <>
+                  <ChevronDown className="mr-2 h-4 w-4" />
+                  Voir plus ({experiences.length - 4} autres)
+                </>
+              )}
+            </Button>
+          </div>
+        )}
 
         <div className="mt-16 text-center">
           <Button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-3 rounded-full">

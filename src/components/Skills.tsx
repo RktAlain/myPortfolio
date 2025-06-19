@@ -51,7 +51,7 @@ const Skills = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-600 mx-auto mb-8"></div>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Une expertise technique polyvalente alliant Data Science et développement fullstack
+            Une expertise technique polyvalente alliant Data Science et Développement d'Application
           </p>
         </div>
 

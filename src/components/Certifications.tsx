@@ -1,50 +1,51 @@
-
-import React from 'react';
+import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Award, Calendar, Eye } from 'lucide-react';
+import { Award, Calendar, Eye, ChevronDown, ChevronUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Certifications = () => {
+  const [showAll, setShowAll] = useState(false);
+  
   const certifications = [
     {
-      title: "Licence en Sciences des Données et Intelligence Artificielle",
-      institution: "École des Mines et des Industries Technologique (EMIT)",
-      date: "2021 - 2024",
-      type: "Diplôme",
-      description: "Formation complète en Data Science, Machine Learning et développement d'applications intelligentes",
-      status: "Obtenu",
-      color: "from-blue-500 to-indigo-600",
-      certificateImage: "" // Vous pourrez ajouter l'image ici
-    },
-    {
-      title: "Certification KNIME Analytics Platform",
+      title: "Attestation KNIME Analytics Platform",
       institution: "KNIME",
-      date: "2024",
-      type: "Certification",
+      date: "2025",
+      type: "Attestation",
       description: "Maîtrise avancée de la plateforme KNIME pour l'analyse de données et le machine learning",
       status: "Certifié",
       color: "from-green-500 to-emerald-600",
-      certificateImage: "" // Vous pourrez ajouter l'image ici
+      certificateImage: ""
     },
     {
       title: "Attestation Hackathon EMIHACK 3.0",
       institution: "EMIT",
-      date: "2023",
+      date: "2025",
       type: "Attestation",
-      description: "2ème place au hackathon - Développement d'une solution innovante en équipe",
+      description: "2ème place au hackathon du développement d'Application - Développement d'une solution innovante en équipe",
       status: "2ème Place",
       color: "from-yellow-500 to-orange-600",
-      certificateImage: "" // Vous pourrez ajouter l'image ici
+      certificateImage: ""
     },
     {
-      title: "Formation Développement Web Fullstack",
-      institution: "Auto-formation & Projets",
+      title: "Licence professionnelle en informatique",
+      institution: "Developpement d'Application Internet/Intranet",
       date: "2022 - 2024",
-      type: "Compétence",
-      description: "Maîtrise de React, Node.js, Java Spring Boot, PHP Laravel et bases de données",
-      status: "Maîtrisé",
+      type: "Diplôme",
+      description: "Maîtrise de React, Node.js, Java Spring Boot, PHP Laravel, Python Django et bases de données",
+      status: "Obtenu",
       color: "from-purple-500 to-pink-600",
-      certificateImage: "" // Vous pourrez ajouter l'image ici
+      certificateImage: ""
+    },
+    {
+      title: "Participation au Summer-code",
+      institution: "École de Management et d'Innovation Technologique (EMIT)",
+      date: "2021 - 2022",
+      type: "Attestation",
+      description: "Maîtrise du HTML/CSS/JS et HackerRank - Création d'une application web statique et Concours Algorithme en équipe",
+      status: "Obtenu",
+      color: "from-blue-500 to-indigo-600",
+      certificateImage: ""
     },
     {
       title: "Attestation Formation Cybersécurité",
@@ -54,14 +55,14 @@ const Certifications = () => {
       description: "Formation en ligne sur les fondamentaux de la cybersécurité",
       status: "Obtenu",
       color: "from-red-500 to-pink-600",
-      certificateImage: "" // Vous pourrez ajouter l'image ici
+      certificateImage: ""
     }
   ];
 
+  const visibleCertifications = showAll ? certifications : certifications.slice(0, 4);
+
   const handleViewCertificate = (cert) => {
-    // Fonction pour voir le certificat - vous pourrez l'implémenter selon vos besoins
     console.log(`Voir le certificat de: ${cert.title}`);
-    // Ici vous pourrez ouvrir une modal ou naviguer vers l'image du certificat
   };
 
   return (
@@ -79,7 +80,7 @@ const Certifications = () => {
 
         {/* Certifications Grid */}
         <div className="grid md:grid-cols-2 gap-8 mb-8">
-          {certifications.map((cert, index) => (
+          {visibleCertifications.map((cert, index) => (
             <Card 
               key={index} 
               className="bg-white/5 border-white/10 hover:bg-white/10 transition-all duration-500 transform hover:scale-105 group animate-fade-in"
@@ -131,8 +132,30 @@ const Certifications = () => {
           ))}
         </div>
 
+        {certifications.length > 4 && (
+          <div className="text-center mb-8">
+            <Button 
+              onClick={() => setShowAll(!showAll)}
+              variant="outline" 
+              className="border-white/20 text-black hover:bg-white/10"
+            >
+              {showAll ? (
+                <>
+                  <ChevronUp className="mr-2 h-4 w-4" />
+                  Voir moins
+                </>
+              ) : (
+                <>
+                  <ChevronDown className="mr-2 h-4 w-4" />
+                  Voir plus ({certifications.length - 4} autres)
+                </>
+              )}
+            </Button>
+          </div>
+        )}
+
         {/* Summary Section */}
-        <div className="mt-16 text-center">
+        <div className="mt-8 text-center">
           <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 p-8 rounded-xl border border-purple-500/30">
             <h3 className="text-2xl font-bold text-white mb-4">Formation Continue</h3>
             <p className="text-gray-300 text-lg">
