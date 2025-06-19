@@ -14,25 +14,35 @@ const Projects = () => {
       icon: Trophy,
       gradient: "from-yellow-600 to-orange-600",
       features: ["Application de gestion", "Analyse de données", "Solution innovante", "Prix du 2ème place"],
-      year: "2024-2025"
+      year: "2024-2025",
+      demoLink: "https://pandemie.onrender.com",
+      codeLink: null,
+      codeMessage: "Code inaccessible"
     },
     {
       title: "Participation au Hackathon Recrutement Access Développement HUB",
-      description: "Hackathon de recrutement - Refonte du processus d'achat de matériel dans une entreprise avec création d'une solution complète.",
-      technologies: ["Processus d'achat", "Gestion d'entreprise", "Innovation", "Solution digitale"],
+      description: "Hackathon de recrutement - Réinvention du processus d'achat de matériel dans une entreprise.",
+      technologies: ["Processus d'achat", "Gestion d'entreprise", "Automatisation", "React TS", "Python Django"],
       icon: ShoppingCart,
       gradient: "from-green-600 to-blue-600",
       features: ["Refonte processus achat", "Solution entreprise", "Innovation digitale", "Hackathon recrutement"],
-      year: "2024-2025"
+      year: "2024-2025",
+      demoLink: "https://accessachat.onrender.com",
+      codeLink: null,
+      codeMessage: "Code inaccessible"
     },
     {
       title: "Stage chez Assurance Aro Antananarivo",
       description: "Obtention de mon diplôme de licence professionnelle en informatique - Création d'une application de centre de documentation et d'information.",
-      technologies: ["React", "Node.js", "MySQL", "Documentation"],
+      technologies: ["React", "JAVA Spring", "PostgreSQL", "Documentation"],
       icon: Database,
       gradient: "from-blue-600 to-purple-600",
       features: ["Application complète", "Centre de documentation", "Interface moderne", "Système d'information"],
-      year: "2023-2024"
+      year: "2023-2024",
+      demoLink: null,
+      codeLink: null,
+      codeMessage: "Code inaccessible",
+      demoMessage: "Lien indisponible"
     },
     {
       title: "Stage chez Computer Store",
@@ -41,7 +51,11 @@ const Projects = () => {
       icon: Code,
       gradient: "from-emerald-600 to-teal-600",
       features: ["Application desktop", "Gestion SAV", "Interface utilisateur", "Base de données"],
-      year: "2022-2023"
+      year: "2022-2023",
+      demoLink: null,
+      codeLink: null,
+      codeMessage: "Code inaccessible",
+      demoMessage: "Lien indisponible"
     },
     {
       title: "Participation à l'EMIHACK 2.0",
@@ -50,7 +64,11 @@ const Projects = () => {
       icon: TrendingUp,
       gradient: "from-purple-600 to-pink-600",
       features: ["Application web", "Suivi des ventes", "Gestion stocks", "Interface responsive"],
-      year: "2021-2022"
+      year: "2021-2022",
+      demoLink: null,
+      codeLink: null,
+      codeMessage: "Code inaccessible",
+      demoMessage: "Lien indisponible"
     },
     {
       title: "Participation au Summer-code",
@@ -59,7 +77,11 @@ const Projects = () => {
       icon: Brain,
       gradient: "from-red-600 to-pink-600",
       features: ["Portfolio web", "Lutte anti-incendie", "Algorithmes", "Développement web"],
-      year: "2021-2022"
+      year: "2021-2022",
+      demoLink: null,
+      codeLink: null,
+      codeMessage: "Code inaccessible",
+      demoMessage: "Lien indisponible"
     }
   ];
 
@@ -114,13 +136,24 @@ const Projects = () => {
                 </div>
                 
                 <div className="flex gap-2 pt-4">
-                  <Button size="sm" className="flex-1 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700">
+                  <Button 
+                    size="sm" 
+                    className="flex-1 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700"
+                    disabled={!experience.codeLink}
+                    onClick={() => experience.codeLink ? window.open(experience.codeLink, '_blank') : null}
+                  >
                     <Github className="h-4 w-4 mr-2" />
-                    Code
+                    {experience.codeLink ? "Code" : experience.codeMessage}
                   </Button>
-                  <Button size="sm" variant="outline" className="flex-1 border-white/20 text-black hover:bg-white/10 hover:text-black">
+                  <Button 
+                    size="sm" 
+                    variant="outline" 
+                    className="flex-1 border-white/20 text-black hover:bg-white/10 hover:text-black"
+                    disabled={!experience.demoLink}
+                    onClick={() => experience.demoLink ? window.open(experience.demoLink, '_blank') : null}
+                  >
                     <ExternalLink className="h-4 w-4 mr-2" />
-                    Demo
+                    {experience.demoLink ? "Demo" : (experience.demoMessage || "Lien indisponible")}
                   </Button>
                 </div>
               </CardContent>
@@ -151,7 +184,10 @@ const Projects = () => {
         )}
 
         <div className="mt-16 text-center">
-          <Button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-3 rounded-full">
+          <Button 
+            className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-3 rounded-full"
+            onClick={() => window.open('https://github.com', '_blank')}
+          >
             <Github className="mr-2 h-5 w-5" />
             Voir tous mes projets sur GitHub
           </Button>

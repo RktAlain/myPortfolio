@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 import { ChevronDown, Download, Github, Linkedin, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -66,6 +65,19 @@ const Hero = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  const handleDownloadCV = () => {
+    // Chemin vers le fichier CV.pdf dans le dossier public
+    const cvUrl = '/CV.pdf';
+    
+    // Créer un lien temporaire pour le téléchargement
+    const link = document.createElement('a');
+    link.href = cvUrl;
+    link.download = 'CV_RAKOTOMALALA_Solohery_Alain.pdf'; // Nom du fichier téléchargé
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <canvas
@@ -88,11 +100,14 @@ const Hero = () => {
           
           <p className="text-lg text-gray-400 mb-8 max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '0.6s' }}>
             Spécialiste en Data Science avec KNIME et en développement web et mobile (React JS/TS, Node JS, JAVA Spring, Python Django, Flutter et React Native). 
-           <br /> Solide expérience dans l’analyse de données complexes pour générer des insights stratégiques.
+           <br /> Solide expérience dans l'analyse de données complexes pour générer des insights stratégiques.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 animate-fade-in" style={{ animationDelay: '0.9s' }}>
-            <Button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105">
+            <Button 
+              onClick={handleDownloadCV}
+              className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105"
+            >
               <Download className="mr-2 h-5 w-5" />
               Télécharger CV
             </Button>
@@ -102,7 +117,7 @@ const Hero = () => {
                  className="p-3 bg-white/10 hover:bg-white/20 rounded-full transition-all duration-300 transform hover:scale-110">
                 <Github className="h-6 w-6 text-white" />
               </a>
-              <a href="https://linkedin.com/in/solohery-alain" target="_blank" rel="noopener noreferrer"
+              <a href="https://linkedin.com/in/solohery-alain-rakotomalala-054599257" target="_blank" rel="noopener noreferrer"
                  className="p-3 bg-white/10 hover:bg-white/20 rounded-full transition-all duration-300 transform hover:scale-110">
                 <Linkedin className="h-6 w-6 text-white" />
               </a>

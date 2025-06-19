@@ -8,27 +8,37 @@ const Certifications = () => {
   
   const certifications = [
     {
-      title: "Attestation KNIME Analytics Platform",
+      title: "Attestation Data Science",
       institution: "KNIME",
       date: "2025",
       type: "Attestation",
       description: "Maîtrise avancée de la plateforme KNIME pour l'analyse de données et le machine learning",
-      status: "Certifié",
+      status: "Obtenu",
       color: "from-green-500 to-emerald-600",
       certificateImage: ""
     },
     {
-      title: "Attestation Hackathon EMIHACK 3.0",
+      title: "Diplôme de participation de leadership pour les jeunes",
+      institution: "KNIME",
+      date: "2025",
+      type: "Diplôme",
+      description: "participation active à l'évenement de leadership pour les jeunes",
+      status: "Obtenu",
+      color: "from-green-500 to-emerald-600",
+      certificateImage: ""
+    },
+    {
+      title: "Certificat Hackathon EMIHACK 3.0",
       institution: "EMIT",
       date: "2025",
-      type: "Attestation",
+      type: "Certificat",
       description: "2ème place au hackathon du développement d'Application - Développement d'une solution innovante en équipe",
-      status: "2ème Place",
+      status: "Obtenu",
       color: "from-yellow-500 to-orange-600",
       certificateImage: ""
     },
     {
-      title: "Licence professionnelle en informatique",
+      title: "Diplôme de Licence professionnelle en informatique",
       institution: "Developpement d'Application Internet/Intranet",
       date: "2022 - 2024",
       type: "Diplôme",
@@ -38,10 +48,10 @@ const Certifications = () => {
       certificateImage: ""
     },
     {
-      title: "Participation au Summer-code",
+      title: "Certificat de Participation au Summer-code",
       institution: "École de Management et d'Innovation Technologique (EMIT)",
       date: "2021 - 2022",
-      type: "Attestation",
+      type: "Certificat",
       description: "Maîtrise du HTML/CSS/JS et HackerRank - Création d'une application web statique et Concours Algorithme en équipe",
       status: "Obtenu",
       color: "from-blue-500 to-indigo-600",
@@ -63,6 +73,20 @@ const Certifications = () => {
 
   const handleViewCertificate = (cert) => {
     console.log(`Voir le certificat de: ${cert.title}`);
+  };
+
+  // Fonction pour déterminer le texte du bouton en fonction du type
+  const getButtonText = (type) => {
+    switch(type) {
+      case 'Attestation':
+        return 'Voir l\'attestation';
+      case 'Diplôme':
+        return 'Voir le diplôme';
+      case 'Certificat':
+        return 'Voir le certificat';
+      default:
+        return 'Voir le document';
+    }
   };
 
   return (
@@ -124,7 +148,7 @@ const Certifications = () => {
                     size="sm"
                   >
                     <Eye className="mr-2 h-4 w-4" />
-                    Voir le certificat
+                    {getButtonText(cert.type)}
                   </Button>
                 </div>
               </CardContent>

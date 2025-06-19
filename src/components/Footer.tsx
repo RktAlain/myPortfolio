@@ -13,7 +13,7 @@ const Footer = () => {
     },
     {
       icon: Linkedin,
-      href: "https://linkedin.com/in/solohery-alain",
+      href: "https://linkedin.com/in/solohery-alain-rakotomalala-054599257",
       label: "LinkedIn"
     },
     {

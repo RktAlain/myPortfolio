@@ -6,13 +6,13 @@ const About = () => {
     {
       icon: Brain,
       title: "Data Science",
-      description: "KNIME, Python, Machine Learning",
+      description: "KNIME, ETL, Power BI",
       color: "bg-gradient-to-br from-purple-600 to-indigo-600"
     },
     {
       icon: Code,
       title: "Développement",
-      description: "React, Node.js, Spring Boot",
+      description: "React, Node.js, Spring Boot, Django",
       color: "bg-gradient-to-br from-blue-600 to-cyan-600"
     },
     {
@@ -36,7 +36,7 @@ const About = () => {
     },
     {
       icon: Globe,
-      text: "Flexible pour travail à distance",
+      text: "Flexible pour travail à distance ou sur site",
       highlight: true
     },
     {
@@ -117,7 +117,7 @@ const About = () => {
             <div className="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-sm hover:backdrop-blur-md transition-all duration-500 shadow-lg">
               <h3 className="text-2xl font-bold text-white mb-4">Mon Parcours</h3>
               <p className="text-gray-300 leading-relaxed mb-4">
-                Diplômé de l'EMIT en Développement d'Applications avec spécialisation en systèmes Internet/Intranet, 
+                Diplômé de l'Ecole de Management et d'Innovation Technologique (EMIT) de Fianarantsoa en Développement d'Applications avec spécialisation en systèmes Internet/Intranet, 
                 je poursuis actuellement un Master en Sciences des Données et Intelligence Artificielle.
               </p>
               <p className="text-gray-300 leading-relaxed">

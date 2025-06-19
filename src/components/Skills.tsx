@@ -5,12 +5,12 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Data Science & Analytics",
+      title: "Data Science & I.A",
       skills: [
         { name: "KNIME", level: 95, color: "from-blue-500 to-cyan-500" },
-        { name: "Python", level: 90, color: "from-green-500 to-teal-500" },
-        { name: "R", level: 85, color: "from-purple-500 to-pink-500" },
-        { name: "Machine Learning", level: 88, color: "from-orange-500 to-red-500" },
+        { name: "ETL", level: 90, color: "from-green-500 to-teal-500" },
+        { name: "Power BI", level: 85, color: "from-purple-500 to-pink-500" },
+        { name: "Python Django", level: 88, color: "from-orange-500 to-red-500" },
       ]
     },
     {
