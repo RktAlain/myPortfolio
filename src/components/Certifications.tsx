@@ -19,7 +19,7 @@ const Certifications = () => {
     },
     {
       title: "Diplôme de participation de leadership pour les jeunes",
-      institution: "KNIME",
+      institution: "Airtel Madagascar",
       date: "2025",
       type: "Diplôme",
       description: "participation active à l'évenement de leadership pour les jeunes",
@@ -94,7 +94,7 @@ const Certifications = () => {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Diplômes & <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Certifications</span>
+            Diplômes & Attestations & <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Certifications</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-600 mx-auto mb-8"></div>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-8">

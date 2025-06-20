@@ -23,8 +23,8 @@ const Navigation = () => {
     { label: 'Accueil', href: '#home', icon: <Home size={18} /> },
     { label: 'À propos', href: '#about', icon: <User size={18} /> },
     { label: 'Compétences', href: '#skills', icon: <Code2 size={18} /> },
-    { label: 'Formation', href: '#formation', icon: <GraduationCap size={18} /> },
-    { label: 'Projets', href: '#projects', icon: <Folder size={18} /> },
+    { label: 'Formations', href: '#formation', icon: <GraduationCap size={18} /> },
+    { label: 'Expériences', href: '#projects', icon: <Folder size={18} /> },
     { label: 'Certifications', href: '#certifications', icon: <BadgeCheck size={18} /> },
     { label: 'Contact', href: '#contact', icon: <Mail size={18} /> }
   ];

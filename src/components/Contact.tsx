@@ -267,7 +267,7 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Téléphone",
-      value: "034 66 974 37",
+      value: "034 66 974 37 (WhatsApp)",
       link: "tel:+261346697437"
     },
     {
@@ -287,7 +287,7 @@ const Contact = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-600 mx-auto mb-8"></div>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Discutons de vos projets Data Science ou de développement web
+            Discutons de vos projets Data Science ou de développement d'applicatiion
           </p>
         </div>
 

@@ -76,7 +76,7 @@ const Formation = () => {
     },
     {
       title: "Baccalauréat série D",
-      institution: "Lycée Privé Arc en Ciel",
+      institution: "Collège Privé Houssen Memorial School",
       period: "2020",
       location: "Toliara, Madagascar",
       specialization: "Sciences et Technologies",

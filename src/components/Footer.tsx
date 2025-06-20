@@ -1,6 +1,5 @@
-
-import React from 'react';
-import { Github, Linkedin, Mail, Phone, MapPin, Heart } from 'lucide-react';
+import React from "react";
+import { Github, Linkedin, Mail, Phone, MapPin, Heart } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -9,18 +8,18 @@ const Footer = () => {
     {
       icon: Github,
       href: "https://github.com/rktalain",
-      label: "GitHub"
+      label: "GitHub",
     },
     {
       icon: Linkedin,
       href: "https://linkedin.com/in/solohery-alain-rakotomalala-054599257",
-      label: "LinkedIn"
+      label: "LinkedIn",
     },
     {
       icon: Mail,
       href: "mailto:rakotomalalasoheryalain@gmail.com",
-      label: "Email"
-    }
+      label: "Email",
+    },
   ];
 
   const quickLinks = [
@@ -29,7 +28,7 @@ const Footer = () => {
     { href: "#skills", label: "Compétences" },
     { href: "#projects", label: "Projets" },
     { href: "#certifications", label: "Certifications" },
-    { href: "#contact", label: "Contact" }
+    { href: "#contact", label: "Contact" },
   ];
 
   return (
@@ -39,11 +38,13 @@ const Footer = () => {
           {/* Logo et description */}
           <div className="md:col-span-2">
             <div className="text-2xl font-bold text-white mb-4">
-              <span className="text-purple-400">R</span>AKOTOMALALA <span className="text-purple-400">S</span>olohery
+              <span className="text-purple-400">R</span>AKOTOMALALA{" "}
+              <span className="text-purple-400">S</span>olohery
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Data Scientist et Développeur Fullstack passionné par l'innovation technologique. 
-              Spécialisé en KNIME, Python, React et développement d'applications web modernes.
+              Data Scientist et Développeur Fullstack passionné par l'innovation
+              technologique. Spécialisé en Data Science et Intelligence
+              Artificielle.
             </p>
             <div className="space-y-2 text-gray-400">
               <div className="flex items-center">
@@ -52,7 +53,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center">
                 <Phone className="h-4 w-4 mr-2" />
-                <span>034 66 974 37</span>
+                <span>034 66 974 37 (WhatsApp)</span>
               </div>
               <div className="flex items-center">
                 <Mail className="h-4 w-4 mr-2" />
@@ -67,7 +68,7 @@ const Footer = () => {
             <ul className="space-y-2">
               {quickLinks.map((link, index) => (
                 <li key={index}>
-                  <a 
+                  <a
                     href={link.href}
                     className="text-gray-400 hover:text-purple-400 transition-colors duration-300"
                   >
@@ -107,14 +108,13 @@ const Footer = () => {
 
         {/* Séparateur */}
         <div className="border-t border-white/10 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-gray-400 text-sm mb-4 md:mb-0">
-              © {currentYear} RAKOTOMALALA Solohery Alain. Tous droits réservés.
-            </div>
-            <div className="flex items-center text-gray-400 text-sm">
-              <span>Fait avec</span>
-              <Heart className="h-4 w-4 mx-1 text-red-500 animate-pulse" />
-              <span>à Madagascar</span>
+          <div className="w-full text-center">
+            {" "}
+            {/* Conteneur plein largeur avec centrage */}
+            <div className="text-gray-400 text-sm inline-block">
+              {" "}
+              {/* inline-block pour que le centrage fonctionne */}©{" "}
+              {currentYear} RAKOTOMALALA Solohery Alain. Tous droits réservés.
             </div>
           </div>
         </div>
