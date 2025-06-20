@@ -1,77 +1,126 @@
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Mail, Phone, MapPin, Send, Linkedin, Github, MessageCircle, X } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Linkedin, Github, MessageCircle, X, CheckCircle, AlertCircle } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
-// Composant séparé pour la bulle de discussion
-const FloatingChat = ({ showChat, setShowChat }) => {
-  const [formData, setFormData] = useState({
+interface FormData {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+  file: File | null;
+}
+
+const FloatingChat = ({ showChat, setShowChat }: { showChat: boolean; setShowChat: (show: boolean) => void }) => {
+  const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
+    subject: '',
     message: '',
-    file: null as File | null
+    file: null
   });
   const [fileName, setFileName] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    let description = "Je vous répondrai dans les plus brefs délais.";
-    
-    if (formData.file) {
-      description = `Fichier "${formData.file.name}" reçu avec votre message. ${description}`;
+    setIsLoading(true);
+
+    try {
+      const formDataToSend = new FormData();
+      formDataToSend.append('name', formData.name);
+      formDataToSend.append('email', formData.email);
+      formDataToSend.append('subject', formData.subject);
+      formDataToSend.append('message', formData.message);
+      if (formData.file) {
+        formDataToSend.append('file', formData.file);
+      }
+
+      const response = await fetch('http://localhost:3000/api/send-email', {
+        method: 'POST',
+        body: formDataToSend,
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.message || "Erreur lors de l'envoi du message");
+      }
+
+      toast({
+        title: (
+          <div className="flex items-center">
+            <CheckCircle className="h-5 w-5 mr-2 text-green-500" />
+            <span>Message envoyé !</span>
+          </div>
+        ),
+        description: "Je vous répondrai dans les plus brefs délais.",
+      });
+      setFormData({ name: '', email: '', subject: '', message: '', file: null });
+      setFileName('');
+      setShowChat(false);
+    } catch (error: any) {
+      toast({
+        title: (
+          <div className="flex items-center">
+            <AlertCircle className="h-5 w-5 mr-2 text-red-500" />
+            <span>Erreur</span>
+          </div>
+        ),
+        description: error.message,
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
     }
-    
-    toast({
-      title: "Message envoyé !",
-      description: description,
-    });
-    setFormData({ name: '', email: '', message: '', file: null });
-    setFileName('');
-    setShowChat(false);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
   };
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files.length > 0) {
       const file = e.target.files[0];
       
-      // Validation de la taille (5MB max)
       if (file.size > 5 * 1024 * 1024) {
         toast({
-          title: "Fichier trop volumineux",
+          title: (
+            <div className="flex items-center">
+              <AlertCircle className="h-5 w-5 mr-2 text-red-500" />
+              <span>Fichier trop volumineux</span>
+            </div>
+          ),
           description: "Veuillez sélectionner un fichier de moins de 5MB",
           variant: "destructive"
         });
         return;
       }
       
-      setFormData({
-        ...formData,
-        file: file
-      });
+      setFormData(prev => ({
+        ...prev,
+        file
+      }));
       setFileName(file.name);
     }
   };
 
   const removeFile = () => {
-    setFormData({
-      ...formData,
+    setFormData(prev => ({
+      ...prev,
       file: null
-    });
+    }));
     setFileName('');
   };
 
   return (
     <>
-      {/* Bouton flottant */}
       <button
         onClick={() => setShowChat(!showChat)}
         className={`fixed bottom-8 right-8 w-16 h-16 rounded-full flex items-center justify-center transition-all duration-300 z-50 shadow-xl ${
@@ -79,6 +128,7 @@ const FloatingChat = ({ showChat, setShowChat }) => {
             ? 'bg-gradient-to-r from-purple-700 to-pink-700 rotate-0' 
             : 'bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 rotate-0 hover:rotate-12'
         }`}
+        aria-label={showChat ? "Fermer le chat" : "Ouvrir le chat"}
       >
         {showChat ? (
           <X className="h-6 w-6 text-white" />
@@ -87,7 +137,6 @@ const FloatingChat = ({ showChat, setShowChat }) => {
         )}
       </button>
 
-      {/* Bulle de discussion */}
       <div className={`fixed bottom-24 right-8 transition-all duration-500 z-50 ${
         showChat ? 'opacity-100 scale-100' : 'opacity-0 scale-90 pointer-events-none'
       }`}>
@@ -98,7 +147,11 @@ const FloatingChat = ({ showChat, setShowChat }) => {
                 <MessageCircle className="h-5 w-5 mr-2 text-purple-400" />
                 Envoyez-moi un message
               </div>
-              <button onClick={() => setShowChat(false)} className="text-gray-400 hover:text-white">
+              <button 
+                onClick={() => setShowChat(false)} 
+                className="text-gray-400 hover:text-white"
+                aria-label="Fermer"
+              >
                 <X className="h-5 w-5" />
               </button>
             </CardTitle>
@@ -122,6 +175,14 @@ const FloatingChat = ({ showChat, setShowChat }) => {
                 className="w-full bg-white/10 border border-white/20 text-white placeholder:text-gray-400 rounded-md px-3 py-2 text-sm"
                 required
               />
+              <input
+                name="subject"
+                placeholder="Objet"
+                value={formData.subject}
+                onChange={handleChange}
+                className="w-full bg-white/10 border border-white/20 text-white placeholder:text-gray-400 rounded-md px-3 py-2 text-sm"
+                required
+              />
               <textarea
                 name="message"
                 placeholder="Votre message"
@@ -132,7 +193,6 @@ const FloatingChat = ({ showChat, setShowChat }) => {
                 required
               />
               
-              {/* Section pièce jointe */}
               <div className="space-y-2">
                 <label className="flex items-center justify-center w-full bg-white/10 border border-white/20 text-white rounded-md px-3 py-2 text-sm cursor-pointer hover:bg-white/20 transition-colors">
                   <input 
@@ -154,6 +214,7 @@ const FloatingChat = ({ showChat, setShowChat }) => {
                       type="button" 
                       onClick={removeFile}
                       className="text-gray-400 hover:text-white"
+                      aria-label="Supprimer le fichier"
                     >
                       <X className="h-4 w-4" />
                     </button>
@@ -164,9 +225,22 @@ const FloatingChat = ({ showChat, setShowChat }) => {
               <Button 
                 type="submit" 
                 className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white py-2 text-sm"
+                disabled={isLoading}
               >
-                <Send className="mr-2 h-4 w-4" />
-                Envoyer
+                {isLoading ? (
+                  <>
+                    <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    Envoi en cours...
+                  </>
+                ) : (
+                  <>
+                    <Send className="mr-2 h-4 w-4" />
+                    Envoyer
+                  </>
+                )}
               </Button>
             </form>
           </CardContent>
@@ -218,7 +292,6 @@ const Contact = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Info */}
           <div className="space-y-8">
             <div>
               <h3 className="text-2xl font-bold text-white mb-6">Restons en contact</h3>
@@ -256,7 +329,6 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Carte OpenStreetMap 3D */}
           <div className="relative h-full min-h-[400px] rounded-xl overflow-hidden shadow-xl">
             <iframe
               src="https://www.openstreetmap.org/export/embed.html?bbox=47.0794%2C-21.4616%2C47.0894%2C-21.4516&layer=mapnik&marker=-21.4566,47.0844"
@@ -264,6 +336,7 @@ const Contact = () => {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
+              title="Localisation à Fianarantsoa"
             ></iframe>
             <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent pointer-events-none"></div>
           </div>
@@ -285,7 +358,6 @@ const Contact = () => {
         </div>
       </div>
 
-      {/* Bulle de discussion flottante globale */}
       <FloatingChat showChat={showChat} setShowChat={setShowChat} />
     </section>
   );
