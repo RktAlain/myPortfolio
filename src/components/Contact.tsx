@@ -38,7 +38,7 @@ const FloatingChat = ({ showChat, setShowChat }: { showChat: boolean; setShowCha
         formDataToSend.append('file', formData.file);
       }
 
-      const response = await fetch('http://localhost:3000/api/send-email', {
+      const response = await fetch('https://backfolio-ium3.onrender.com/api/send-email', {
         method: 'POST',
         body: formDataToSend,
       });
