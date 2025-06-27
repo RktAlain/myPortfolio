@@ -9,8 +9,8 @@ const Skills = () => {
       skills: [
         { name: "KNIME", level: 90, color: "from-blue-500 to-cyan-500" },
         { name: "ETL", level: 90, color: "from-green-500 to-teal-500" },
-        { name: "Power BI", level: 65, color: "from-purple-500 to-pink-500" },
-        { name: "Excel", level: 70, color: "from-orange-500 to-red-500" },
+        { name: "Modélisation", level: 75, color: "from-purple-500 to-pink-500" },
+        { name: "I.A", level: 70, color: "from-orange-500 to-red-500" },
       ]
     },
     {

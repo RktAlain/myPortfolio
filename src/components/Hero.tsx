@@ -99,7 +99,7 @@ const Hero = () => {
           </div>
           
           <p className="text-lg text-gray-400 mb-8 max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '0.6s' }}>
-            Spécialiste en Data Science avec KNIME et en développement web et mobile (React JS/TS, Node JS, JAVA Spring, Python Django, Flutter et React Native). 
+            Spécialiste en Data Science et en développement web et mobile. 
            <br /> Solide expérience dans l'analyse de données complexes pour générer des insights stratégiques.
           </p>
           

@@ -18,7 +18,7 @@ const About = () => {
     {
       icon: Brain,
       title: "Data Science",
-      description: "KNIME, ETL, Power BI",
+      description: "KNIME, ETL, Modélisation, I.A",
       color: "bg-gradient-to-br from-purple-600 to-indigo-600",
     },
     {
