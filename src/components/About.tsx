@@ -18,7 +18,7 @@ const About = () => {
     {
       icon: Brain,
       title: "Data Science",
-      description: "KNIME, ETL, Modélisation, I.A",
+      description: "Knime, Power BI, Python, Auto ML, ETL, Modélisation, I.A",
       color: "bg-gradient-to-br from-purple-600 to-indigo-600",
     },
     {
@@ -36,7 +36,7 @@ const About = () => {
     {
       icon: TrendingUp,
       title: "Analytics",
-      description: "Visualisation & Insights, RF, LSTM",
+      description: "Visualisation & Insights",
       color: "bg-gradient-to-br from-pink-600 to-rose-600",
     },
   ];
@@ -96,7 +96,7 @@ const About = () => {
                     Solohery Alain
                   </h3>
                   <p className="text-purple-300 text-center mb-6">
-                    Data Scientist & Développeur Fullstack
+                    Data Scientist & Développeur web|mobile
                   </p>
 
                   <div className="flex items-center justify-center text-gray-300 hover:text-white transition-colors">
@@ -160,9 +160,8 @@ const About = () => {
                 Artificielle.
               </p>
               <p className="text-gray-300 leading-relaxed">
-                Passionné par l'innovation technologique, je combine expertise
-                en analyse de données et développement fullstack pour créer des
-                solutions digitales performantes et intuitives.
+              Passionné par l’innovation technologique, je mets à profit mon expertise en analyse de données 
+              et en développement d’applications pour concevoir des solutions digitales performantes, intuitives et orientées vers l’aide à la décision.
               </p>
             </div>
 

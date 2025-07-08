@@ -8,10 +8,10 @@ const Certifications = () => {
   
   const certifications = [
     {
-      title: "Attestation Data Science",
-      institution: "KNIME",
+      title: "Certificat Data Science",
+      institution: "IDEA Academy",
       date: "2025",
-      type: "Attestation",
+      type: "Certificat",
       description: "Maîtrise avancée de la plateforme KNIME pour l'analyse de données et le machine learning",
       status: "Obtenu",
       color: "from-green-500 to-emerald-600",

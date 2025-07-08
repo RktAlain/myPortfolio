@@ -7,28 +7,28 @@ const Skills = () => {
     {
       title: "Data Science & I.A",
       skills: [
-        { name: "KNIME", level: 90, color: "from-blue-500 to-cyan-500" },
-        { name: "ETL", level: 90, color: "from-green-500 to-teal-500" },
-        { name: "Modélisation", level: 75, color: "from-purple-500 to-pink-500" },
-        { name: "I.A", level: 70, color: "from-orange-500 to-red-500" },
+        { name: "Knime, Power BI", level: 90, color: "from-blue-500 to-cyan-500" },
+        { name: "Python ", level: 90, color: "from-green-500 to-teal-500" },
+        { name: "ETL", level: 75, color: "from-purple-500 to-pink-500" },
+        { name: "Modélisation, I.A", level: 70, color: "from-orange-500 to-red-500" },
       ]
     },
     {
       title: "Développement Web",
       skills: [
-        { name: "React", level: 90, color: "from-indigo-500 to-purple-500" },
-        { name: "Node.js", level: 85, color: "from-yellow-500 to-orange-500" },
-        { name: "HTML5/CSS3", level: 95, color: "from-pink-500 to-rose-500" },
-        { name: "JavaScript", level: 92, color: "from-emerald-500 to-teal-500" },
+        { name: "React, Node JS", level: 90, color: "from-indigo-500 to-purple-500" },
+        { name: "Java Spring", level: 85, color: "from-yellow-500 to-orange-500" },
+        { name: "Python Django", level: 90, color: "from-pink-500 to-rose-500" },
+        { name: "PHP Laravel", level: 65, color: "from-emerald-500 to-teal-500" },
       ]
     },
     {
-      title: "Backend & Mobile",
+      title: "Desktop & Mobile",
       skills: [
-        { name: "Java Spring Boot", level: 85, color: "from-blue-600 to-indigo-600" },
-        { name: "PHP Laravel", level: 73, color: "from-yellow-600 to-orange-600" },
-        { name: "Flutter, React Native", level: 78, color: "from-green-600 to-emerald-600" },
-        { name: "Python Django", level: 70, color: "from-purple-600 to-pink-600" },
+        { name: "Java Swing", level: 70, color: "from-blue-600 to-indigo-600" },
+        { name: "Java FX", level: 73, color: "from-yellow-600 to-orange-600" },
+        { name: "Flutter", level: 78, color: "from-green-600 to-emerald-600" },
+        { name: "React Native", level: 70, color: "from-purple-600 to-pink-600" },
       ]
     },
     {
@@ -183,7 +183,7 @@ const Skills = () => {
             <div className="absolute -inset-1 bg-[conic-gradient(from_90deg_at_50%_50%,#805ad5_0%,#d53f8c_50%,#805ad5_100%)] opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
             <h3 className="text-2xl font-bold text-white mb-4 relative z-10">Design & Outils</h3>
             <ul className="text-gray-300 space-y-2 relative z-10">
-              {["Figma, Adobe Photoshop", "UML, Scrum, Merise II", "Administration réseaux"].map((tool, i) => (
+              {["Figma, Adobe Photoshop", "UML, Scrum, Merise II", "Lucidchart"].map((tool, i) => (
                 <motion.li 
                   key={i}
                   initial={{ x: -20, opacity: 0 }}

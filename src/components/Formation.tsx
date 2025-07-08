@@ -9,8 +9,8 @@ const Formation = () => {
       institution: "IDEA Academy",
       period: "2025",
       location: "Fianarantsoa, Madagascar",
-      specialization: "Attestation de fin de formation",
-      description: "Acquisition de compétences avancées en Data Science avec Knime",
+      specialization: "Certification de réussite",
+      description: "Acquisition de compétences avancées en Data Science",
       color: "from-fuchsia-500 to-purple-600",
       icon: BarChart4
     },
@@ -30,7 +30,7 @@ const Formation = () => {
       period: "2024",
       location: "Fianarantsoa, Madagascar",
       specialization: "Obtention du diplôme de licence",
-      description: "Formation complète en développement informatique et gestion de projets",
+      description: "Formation complète en développement informatique",
       color: "from-purple-500 to-pink-600",
       icon: GraduationCap
     },
@@ -40,7 +40,7 @@ const Formation = () => {
       period: "2024",
       location: "Fianarantsoa, Madagascar",
       specialization: "Français Langue Étrangère",
-      description: "Certification de compétence en langue française niveau intermédiaire avancé",
+      description: "Acquisition de compétence en langue française niveau B2",
       color: "from-green-500 to-emerald-600",
       icon: Award
     },
@@ -50,7 +50,7 @@ const Formation = () => {
       period: "2023",
       location: "Fianarantsoa, Madagascar",
       specialization: "Développement d'Application Internet/Intranet",
-      description: "Approfondissement des connaissances en programmation et développement web",
+      description: "Approfondissement des connaissances en programmation et développement d'application",
       color: "from-cyan-500 to-blue-600",
       icon: Code
     },
