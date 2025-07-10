@@ -8,7 +8,7 @@ const Skills = () => {
       title: "Data Science & I.A",
       skills: [
         { name: "Knime, Power BI", level: 90, color: "from-blue-500 to-cyan-500" },
-        { name: "Python ", level: 90, color: "from-green-500 to-teal-500" },
+        { name: "Python, Auto ML ", level: 87, color: "from-green-500 to-teal-500" },
         { name: "ETL", level: 75, color: "from-purple-500 to-pink-500" },
         { name: "Modélisation, I.A", level: 70, color: "from-orange-500 to-red-500" },
       ]
