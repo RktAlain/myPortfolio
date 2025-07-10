@@ -24,7 +24,7 @@ const About = () => {
     {
       icon: Code,
       title: "Développement",
-      description: "React, Node.js, Spring Boot, Django, Flutter",
+      description: "React, Node.js, Spring Boot, Django, Flutter, React Native",
       color: "bg-gradient-to-br from-blue-600 to-cyan-600",
     },
     {
