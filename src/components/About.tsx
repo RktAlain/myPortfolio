@@ -96,7 +96,7 @@ const About = () => {
                     Solohery Alain
                   </h3>
                   <p className="text-purple-300 text-center mb-6">
-                    Data Scientist & Développeur web|mobile
+                    Data Scientist & Développeur web | mobile
                   </p>
 
                   <div className="flex items-center justify-center text-gray-300 hover:text-white transition-colors">
