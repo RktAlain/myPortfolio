@@ -9,7 +9,7 @@ const Formation = () => {
       institution: "IDEA Academy",
       period: "2025",
       location: "Fianarantsoa, Madagascar",
-      specialization: "Certification de réussite",
+      specialization: "Attestation de formation",
       description: "Acquisition de compétences avancées en Data Science",
       color: "from-fuchsia-500 to-purple-600",
       icon: BarChart4

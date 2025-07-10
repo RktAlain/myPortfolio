@@ -183,7 +183,7 @@ const Skills = () => {
             <div className="absolute -inset-1 bg-[conic-gradient(from_90deg_at_50%_50%,#805ad5_0%,#d53f8c_50%,#805ad5_100%)] opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
             <h3 className="text-2xl font-bold text-white mb-4 relative z-10">Design & Outils</h3>
             <ul className="text-gray-300 space-y-2 relative z-10">
-              {["Figma, Adobe Photoshop", "UML, Scrum, Merise II", "Lucidchart"].map((tool, i) => (
+              {["Figma, Canva", "UML, Scrum, Merise II", "Lucidchart"].map((tool, i) => (
                 <motion.li 
                   key={i}
                   initial={{ x: -20, opacity: 0 }}
