@@ -54,6 +54,17 @@ const Certifications = () => {
       certificateImage: "licence.jpg",
     },
     {
+      title: "Diplôme DELF B2",
+      institution: "Alliance Française",
+      date: "2023 - 2024",
+      type: "Diplôme",
+      description:
+        "Maîtrise de la langue française",
+      status: "Obtenu",
+      color: "from-blue-500 to-indigo-600",
+      certificateImage: "delf.jpg",
+    },
+    {
       title: "Certificat de Participation au Summer-code",
       institution: "École de Management et d'Innovation Technologique (EMIT)",
       date: "2021 - 2022",
