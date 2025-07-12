@@ -52,7 +52,7 @@ const Projects = () => {
       gradient: "from-emerald-600 to-teal-600",
       features: ["Application desktop", "Gestion SAV", "Interface utilisateur", "Base de données"],
       year: "2022-2023",
-      demoLink: "https://drive.google.com/file/d/1epd8uj3geV35XVaQ0T8JkzPGSh6kCXp4/view?usp=sharing",
+      demoLink: "https://www.mediafire.com/file/urxeltu15rv8al7/Application.rar/file",
       codeLink: null,
       codeMessage: "Code inaccessible",
       demoMessage: "Lien indisponible"
