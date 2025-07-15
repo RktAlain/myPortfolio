@@ -33,8 +33,6 @@ const Navigation = () => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
         controls.start({
-          y: 0,
-          opacity: 1,
           backdropFilter: 'blur(10px)',
           backgroundColor: 'rgba(15, 23, 42, 0.95)',
           transition: { duration: 0.3 }
@@ -91,9 +89,13 @@ const Navigation = () => {
   return (
     <motion.nav
       ref={navRef}
-      initial={{ y: -100, opacity: 0 }}
-      animate={controls}
-      transition={{ duration: 0.5 }}
+      initial={false} // Supprime l'animation initiale
+      animate={{ 
+        y: 0, 
+        opacity: 1,
+        backdropFilter: 'blur(5px)',
+        backgroundColor: 'rgba(15, 23, 42, 0.8)'
+      }}
       className="fixed top-0 left-0 right-0 bg-slate-900/80 backdrop-blur-sm border-b border-purple-500/20 z-50 shadow-lg"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -119,13 +121,11 @@ const Navigation = () => {
               }}
               className="relative h-10 w-10 md:h-12 md:w-12 rounded-full overflow-hidden border-2 border-purple-400 cursor-pointer"
             >
-              {/* Utilisez img au lieu de next/image */}
               <img 
                 src="/profile.jpg" 
                 alt="Photo de profil"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
               />
-              {/* Effet de halo au survol */}
               <motion.div
                 initial={{ opacity: 0 }}
                 whileHover={{ opacity: 0.3 }}
