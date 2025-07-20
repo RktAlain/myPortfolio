@@ -118,7 +118,7 @@ const Certifications = () => {
   return (
     <section
       id="certifications"
-      className="py-20 px-4 bg-gradient-to-b from-purple-900/30 to-slate-900/50"
+      className="py-20 px-4 relative"
     >
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
@@ -225,8 +225,8 @@ const Certifications = () => {
             </h3>
             <p className="text-gray-300 text-lg">
               Toujours en quête d'apprentissage, je continue de me former aux
-              dernières technologies et méthodologies en Science de Données & Intelligence Articielle et
-              développement d'application.
+              dernières technologies et méthodologies en Science de Données, Intelligence Articielle et
+              en développement d'applications.
             </p>
           </div>
         </div>

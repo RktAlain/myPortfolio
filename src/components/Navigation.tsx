@@ -89,16 +89,16 @@ const Navigation = () => {
   return (
     <motion.nav
       ref={navRef}
-      initial={false} // Supprime l'animation initiale
+      initial={false}
       animate={{ 
         y: 0, 
         opacity: 1,
         backdropFilter: 'blur(5px)',
         backgroundColor: 'rgba(15, 23, 42, 0.8)'
       }}
-      className="fixed top-0 left-0 right-0 bg-slate-900/80 backdrop-blur-sm border-b border-purple-500/20 z-50 shadow-lg"
+      className="fixed top-0 left-0 right-0 bg-slate-900/80 backdrop-blur-sm border-b border-purple-500/20 z-50 shadow-sm"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full px-4 sm:container sm:mx-auto">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo with photo and 3D effects */}
           <motion.div
@@ -144,8 +144,8 @@ const Navigation = () => {
             </motion.div>
           </motion.div>
           
-          {/* Desktop Navigation - 3D effect */}
-          <nav className="hidden md:flex items-center space-x-1">
+          {/* Desktop Navigation - Only shown on very large screens (> 1246px) */}
+          <nav className="hidden xl:flex items-center space-x-1">
             {navItems.map((item) => (
               <motion.div
                 key={item.label}
@@ -192,9 +192,9 @@ const Navigation = () => {
             ))}
           </nav>
 
-          {/* Mobile Menu Button with 3D flip effect */}
+          {/* Mobile Menu Button - Shown on screens smaller than 1246px */}
           <motion.button
-            className="md:hidden p-2 rounded-full bg-purple-900/30 relative"
+            className="xl:hidden p-2 rounded-full bg-purple-900/30 relative"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
@@ -218,7 +218,7 @@ const Navigation = () => {
           </motion.button>
         </div>
 
-        {/* Mobile Navigation with 3D effects */}
+        {/* Mobile Navigation - Shown on screens smaller than 1246px */}
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div
@@ -239,12 +239,12 @@ const Navigation = () => {
                 rotateX: 15,
                 transition: { duration: 0.2 }
               }}
-              className="md:hidden absolute left-0 right-0 bg-slate-800/95 backdrop-blur-sm shadow-lg origin-top"
+              className="xl:hidden absolute left-0 right-0 bg-slate-800/95 backdrop-blur-sm shadow-lg origin-top w-full"
               style={{
                 top: navRef.current?.offsetHeight || '64px'
               }}
             >
-              <div className="max-w-7xl mx-auto px-4 sm:px-6">
+              <div className="px-4">
                 <nav className="flex flex-col space-y-2 py-2">
                   {navItems.map((item, index) => (
                     <motion.a

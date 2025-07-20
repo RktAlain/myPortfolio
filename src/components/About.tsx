@@ -60,8 +60,10 @@ const About = () => {
   return (
     <section
       id="about"
-      className="py-20 px-4 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-900/30 via-slate-900 to-slate-950"
+      className="py-20 px-4 relative" // Suppression du gradient ici
     >
+      {/* Ajout d'un fond fixe spécifique à la section About */}
+      <div className="fixed inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-900/30 via-slate-900 to-slate-950"></div>
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -96,7 +98,7 @@ const About = () => {
                     Solohery Alain
                   </h3>
                   <p className="text-purple-300 text-center mb-6">
-                    Data Scientist & Développeur web | mobile
+                    Data Scientist & Développeur d'Applications
                   </p>
 
                   <div className="flex items-center justify-center text-gray-300 hover:text-white transition-colors">
@@ -160,8 +162,8 @@ const About = () => {
                 Artificielle.
               </p>
               <p className="text-gray-300 leading-relaxed">
-              Passionné par l’innovation technologique, je mets à profit mon expertise en analyse de données 
-              et en développement d’applications pour concevoir des solutions digitales performantes, intuitives et orientées vers l’aide à la décision.
+              Spécialiste en innovation technologique, je mets à profit mon expertise en analyse de données et 
+              en développement d’applications pour concevoir des solutions digitales performantes, intuitives et orientées vers l’aide à la décision.
               </p>
             </div>
 

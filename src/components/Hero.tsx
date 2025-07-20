@@ -95,7 +95,7 @@ const Hero = () => {
           </h1>
           
           <div className="text-xl md:text-2xl text-gray-300 mb-8 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-            <span className="typing-animation">Data Scientist & Développeur web | mobile</span>
+            <span className="typing-animation">Data Scientist & Développeur d'Applications</span>
           </div>
           
           <p className="text-lg text-gray-400 mb-8 max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '0.6s' }}>

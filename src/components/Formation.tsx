@@ -87,7 +87,7 @@ const Formation = () => {
   ];
 
   return (
-    <section id="formation" className="py-20 px-4 bg-gradient-to-b from-slate-900/50 to-purple-900/30">
+    <section id="formation" className="py-20 px-4 relative">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">

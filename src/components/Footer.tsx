@@ -32,14 +32,20 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-slate-900/95 border-t border-white/10">
+    <footer className="py-20 px-4 relative">
+      {/* Divider ajouté ici */}
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="border-t border-white/10 mb-12"></div>
+      </div>
+      
       <div className="max-w-6xl mx-auto px-4 py-12">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Logo et description */}
           <div className="md:col-span-2">
             <div className="text-2xl font-bold text-white mb-4">
               <span className="text-purple-400">R</span>AKOTOMALALA{" "}
-              <span className="text-purple-400">S</span>olohery
+              <span className="text-purple-400">S</span>olohery{" "}
+              <span className="text-purple-400">A</span>lain
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
               Data Scientist et Développeur Fullstack passionné par l'innovation
