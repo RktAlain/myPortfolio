@@ -5,11 +5,11 @@ import { motion } from 'framer-motion';
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Data Science & I.A",
+      title: "Data Science & BI",
       skills: [
         { name: "Knime, Power BI", level: 90, color: "from-blue-500 to-cyan-500" },
         { name: "Python, Auto ML ", level: 87, color: "from-green-500 to-teal-500" },
-        { name: "ETL", level: 75, color: "from-purple-500 to-pink-500" },
+        { name: "ETL, OLAP", level: 75, color: "from-purple-500 to-pink-500" },
         { name: "Modélisation, I.A", level: 70, color: "from-orange-500 to-red-500" },
       ]
     },
@@ -28,7 +28,7 @@ const Skills = () => {
         { name: "Java Swing", level: 70, color: "from-blue-600 to-indigo-600" },
         { name: "Java FX", level: 73, color: "from-yellow-600 to-orange-600" },
         { name: "Flutter", level: 78, color: "from-green-600 to-emerald-600" },
-        { name: "React Native", level: 70, color: "from-purple-600 to-pink-600" },
+        { name: "React Native", level: 50, color: "from-purple-600 to-pink-600" },
       ]
     },
     {
@@ -84,7 +84,7 @@ const Skills = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-600 mx-auto mb-8"></div>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Une expertise technique polyvalente alliant Data Science et Développement d'Application
+            Une expertise technique polyvalente alliant Data Science, BI et Développement d'Application
           </p>
         </motion.div>
 
