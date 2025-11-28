@@ -43,7 +43,7 @@ const Projects = () => {
       codeMessage: "Code inaccessible"
     },
     {
-      title: "Participation au Hackathon Recrutement Access Développement HUB (Organisé par Accès Banque)",
+      title: "Participation au Hackathon Recrutement Access Développement HUB (Organisé par AccèsBanque)",
       description: "Hackathon de recrutement - Réinvention du processus d'achat de matériel dans une entreprise.",
       technologies: ["Processus d'achat", "Gestion d'entreprise", "Automatisation", "React TS", "Python Django"],
       icon: ShoppingCart,
@@ -55,7 +55,7 @@ const Projects = () => {
       codeMessage: "Code inaccessible"
     },
     {
-      title: "Stage chez Assurance Aro Antananarivo",
+      title: "Stage chez Assurance Aro Antsahavola Antananarivo",
       description: "Obtention de mon diplôme de licence professionnelle en informatique - Création d'une application de centre de documentation et d'information.",
       technologies: ["React", "JAVA Spring", "PostgreSQL", "Documentation"],
       icon: Database,
@@ -68,7 +68,7 @@ const Projects = () => {
       demoMessage: "Lien indisponible"
     },
     {
-      title: "Stage chez Computer Store",
+      title: "Stage chez Computer Store Fianarantsoa",
       description: "En vue de mon passage en 3ème année de licence - Création d'une application Desktop pour la gestion des Services Après-vente.",
       technologies: ["Desktop App", "Java", "Swing", "Gestion SAV"],
       icon: Code,
@@ -76,19 +76,6 @@ const Projects = () => {
       features: ["Application desktop", "Gestion SAV", "Interface utilisateur", "Base de données"],
       year: "2022-2023",
       demoLink: "https://www.mediafire.com/file/urxeltu15rv8al7/Application.rar/file",
-      codeLink: null,
-      codeMessage: "Code inaccessible",
-      demoMessage: "Lien indisponible"
-    },
-    {
-      title: "Participation à l'EMIHACK 2.0",
-      description: "Hackathon interne de l'EMIT - Création d'une application web pour la gestion du suivi de vente de vin.",
-      technologies: ["HTML", "CSS", "JavaScript", "PHP"],
-      icon: TrendingUp,
-      gradient: "from-purple-600 to-pink-600",
-      features: ["Application web", "Suivi des ventes", "Gestion stocks", "Interface responsive"],
-      year: "2021-2022",
-      demoLink: null,
       codeLink: null,
       codeMessage: "Code inaccessible",
       demoMessage: "Lien indisponible"

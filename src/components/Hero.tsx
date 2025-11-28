@@ -90,16 +90,16 @@ const Hero = () => {
         <div className="animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
-              RAKOTOMALALA Solohery Alain
+              Solohery Alain RAKOTOMALALA
             </span>
           </h1>
           
           <div className="text-xl md:text-2xl text-gray-300 mb-8 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-            <span className="typing-animation">Data Scientist / BI Analyst & Dev Fullstack</span>
+            <span className="typing-animation">BI Analyst / Data SCientist & Dev Fullstack</span>
           </div>
           
           <p className="text-lg text-gray-400 mb-8 max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '0.6s' }}>
-            Spécialiste en Data Science et en développement web et mobile. 
+            Spécialiste en Data, I.A et en développement web et mobile. 
            <br /> Solide expérience dans l'analyse de données complexes pour générer des insights stratégiques.
           </p>
           

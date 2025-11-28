@@ -18,7 +18,7 @@ const About = () => {
     {
       icon: Brain,
       title: "Data Science & BI",
-      description: "Knime, Power BI, Python, OLAP, Auto ML, ETL, Modélisation, I.A",
+      description: "Knime, Power BI, Python, OLAP, Auto ML, ETL, SQL, I.A",
       color: "bg-gradient-to-br from-purple-600 to-indigo-600",
     },
     {
@@ -44,7 +44,7 @@ const About = () => {
   const availabilityItems = [
     {
       icon: Home,
-      text: "Fianarantsoa, Madagascar",
+      text: "Mobile (Antananarivo - Fianarantsoa - Toliara)",
     },
     {
       icon: Globe,
@@ -53,7 +53,7 @@ const About = () => {
     },
     {
       icon: Briefcase,
-      text: "Recherche alternance/projet",
+      text: "Recherche alternance/stage/Emploi/Projet",
     },
   ];
 

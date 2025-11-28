@@ -37,25 +37,25 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto px-4">
         <div className="border-t border-white/10 mb-12"></div>
       </div>
-      
+
       <div className="max-w-6xl mx-auto px-4 py-12">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Logo et description */}
           <div className="md:col-span-2">
             <div className="text-2xl font-bold text-white mb-4">
-              <span className="text-purple-400">R</span>AKOTOMALALA{" "}
               <span className="text-purple-400">S</span>olohery{" "}
-              <span className="text-purple-400">A</span>lain
+              <span className="text-purple-400">A</span>lain{" "}
+              <span className="text-purple-400">R</span>AKOTOMALALA
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Data Scientist et Développeur Fullstack passionné par l'innovation
-              technologique. Spécialisé en Data Science et Intelligence
+              BI Analyst, Data Scientist et Développeur Fullstack passionné par
+              l'innovation technologique. Spécialisé en Data et Intelligence
               Artificielle.
             </p>
             <div className="space-y-2 text-gray-400">
               <div className="flex items-center">
                 <MapPin className="h-4 w-4 mr-2" />
-                <span>Imandry Fianarantsoa, Madagascar</span>
+                <span>Mobile (Antananarivo - Fianarantsoa - Toliara)</span>
               </div>
               <div className="flex items-center">
                 <Phone className="h-4 w-4 mr-2" />

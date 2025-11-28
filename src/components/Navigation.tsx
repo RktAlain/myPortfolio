@@ -139,8 +139,8 @@ const Navigation = () => {
               transition={{ duration: 0.3 }}
               className="font-bold text-xl md:text-2xl text-white"
             >
-              <span className="text-purple-400">R</span>AKOTOMALALA{' '}
-              <span className="text-purple-400">S</span>olohery
+              <span className="text-purple-400">S</span>olohery{' '}
+              <span className="text-purple-400">A</span>lain
             </motion.div>
           </motion.div>
           

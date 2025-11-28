@@ -1,12 +1,21 @@
 import React, { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Award, Calendar, Eye, ChevronDown, ChevronUp, X } from "lucide-react";
+import {
+  Award,
+  Calendar,
+  Eye,
+  ChevronDown,
+  ChevronUp,
+  X,
+  Users,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Certifications = () => {
   const [showAll, setShowAll] = useState(false);
   const [selectedCert, setSelectedCert] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [activeImageIndex, setActiveImageIndex] = useState(0);
 
   const certifications = [
     {
@@ -36,15 +45,26 @@ const Certifications = () => {
       institution: "EMIT",
       date: "2025",
       type: "Certificat",
-      description:
-        "2ème place au hackathon du développement d'Application - Développement d'une solution innovante en équipe",
+      description: "2ème place au hackathon du développement d'Application",
+      modalDescription: (
+        <>
+          2ème place au hackathon du développement d'Application - Note : le
+          texte contient une erreur de l'organisateur (
+          <strong>« première place »</strong> au lieu de{" "}
+          <strong>« deuxième place »</strong>). Le badge indique bien la 2e
+          place.
+        </>
+      ),
       status: "Obtenu",
       color: "from-yellow-500 to-orange-600",
       certificateImage: "emihack2.png",
+      // Ajout des images supplémentaires pour EMIHACK
+      additionalImages: ["grtx1.jpg", "grtx2.jpg"],
+      teamPhotos: true,
     },
     {
       title: "Diplôme de Licence professionnelle en informatique",
-      institution: "Developpement d'Application Internet/Intranet",
+      institution: "EMIT",
       date: "2022 - 2024",
       type: "Diplôme",
       description:
@@ -58,15 +78,14 @@ const Certifications = () => {
       institution: "Alliance Française",
       date: "2023 - 2024",
       type: "Diplôme",
-      description:
-        "Maîtrise de la langue française",
+      description: "Maîtrise de la langue française",
       status: "Obtenu",
       color: "from-blue-500 to-indigo-600",
       certificateImage: "delf.jpg",
     },
     {
       title: "Certificat de Participation au Summer-code",
-      institution: "École de Management et d'Innovation Technologique (EMIT)",
+      institution: "EMIT",
       date: "2021 - 2022",
       type: "Certificat",
       description:
@@ -94,12 +113,34 @@ const Certifications = () => {
 
   const handleViewCertificate = (cert) => {
     setSelectedCert(cert);
+    setActiveImageIndex(0);
     setIsModalOpen(true);
   };
 
   const closeModal = () => {
     setIsModalOpen(false);
-    setTimeout(() => setSelectedCert(null), 500); // Wait for animation to finish
+    setTimeout(() => setSelectedCert(null), 500);
+  };
+
+  const nextImage = () => {
+    if (selectedCert?.teamPhotos) {
+      const totalImages = 1 + (selectedCert.additionalImages?.length || 0);
+      setActiveImageIndex((prev) => (prev + 1) % totalImages);
+    }
+  };
+
+  const prevImage = () => {
+    if (selectedCert?.teamPhotos) {
+      const totalImages = 1 + (selectedCert.additionalImages?.length || 0);
+      setActiveImageIndex((prev) => (prev - 1 + totalImages) % totalImages);
+    }
+  };
+
+  const getCurrentImage = () => {
+    if (!selectedCert?.teamPhotos || activeImageIndex === 0) {
+      return selectedCert?.certificateImage;
+    }
+    return selectedCert.additionalImages[activeImageIndex - 1];
   };
 
   const getButtonText = (type) => {
@@ -116,10 +157,7 @@ const Certifications = () => {
   };
 
   return (
-    <section
-      id="certifications"
-      className="py-20 px-4 relative"
-    >
+    <section id="certifications" className="py-20 px-4 relative">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -225,8 +263,8 @@ const Certifications = () => {
             </h3>
             <p className="text-gray-300 text-lg">
               Toujours en quête d'apprentissage, je continue de me former aux
-              dernières technologies et méthodologies en Science de Données, Intelligence Articielle et
-              en développement d'applications.
+              dernières technologies et méthodologies en Science de Données,
+              Intelligence Articielle et en développement d'applications.
             </p>
           </div>
         </div>
@@ -271,8 +309,48 @@ const Certifications = () => {
                 </div>
 
                 <p className="text-gray-300 mb-6 flex-grow">
-                  {selectedCert?.description}
+                  {selectedCert?.modalDescription || selectedCert?.description}
                 </p>
+
+                {/* Section Photos d'équipe pour EMIHACK */}
+                {selectedCert?.teamPhotos && (
+                  <div className="bg-white/5 p-4 rounded-lg border border-white/10 mb-4">
+                    <div className="flex items-center mb-3">
+                      <Users className="h-5 w-5 text-purple-400 mr-2" />
+                      <h4 className="text-white font-medium">
+                        Photos d'équipe
+                      </h4>
+                    </div>
+                    <div className="flex space-x-2">
+                      {[
+                        0,
+                        ...Array(selectedCert.additionalImages?.length || 0)
+                          .keys()
+                          .map((i) => i + 1),
+                      ].map((index) => (
+                        <button
+                          key={index}
+                          onClick={() => setActiveImageIndex(index)}
+                          className={`w-10 h-10 rounded-lg border-2 transition-all duration-300 ${
+                            activeImageIndex === index
+                              ? "border-purple-500 scale-110"
+                              : "border-white/20 hover:border-white/40"
+                          } overflow-hidden`}
+                        >
+                          <img
+                            src={
+                              index === 0
+                                ? selectedCert.certificateImage
+                                : selectedCert.additionalImages[index - 1]
+                            }
+                            alt={`Vue ${index + 1}`}
+                            className="w-full h-full object-cover"
+                          />
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                )}
 
                 <div className="bg-white/5 p-4 rounded-lg border border-white/10">
                   <h4 className="text-white font-medium mb-2">
@@ -280,23 +358,70 @@ const Certifications = () => {
                   </h4>
                   <ul className="text-gray-300 text-sm space-y-1">
                     <li>Type: {selectedCert?.type}</li>
-                    <li>Institution: {selectedCert?.institution}</li>
+                    <li>Provenance: {selectedCert?.institution}</li>
                     <li>Date d'obtention: {selectedCert?.date}</li>
+                    {selectedCert?.teamPhotos && (
+                      <li className="text-purple-400">
+                        Photos d'équipe incluses
+                      </li>
+                    )}
                   </ul>
                 </div>
               </div>
 
               <div className="md:w-2/3 p-6 flex items-center justify-center bg-slate-900/50 relative">
-                {selectedCert?.certificateImage ? (
-                  <div className="relative w-full h-96 overflow-hidden rounded-lg border-2 border-white/10 shadow-lg transform transition-transform duration-500 hover:scale-105">
+                {getCurrentImage() ? (
+                  <div className="relative w-full h-96 overflow-hidden rounded-lg border-2 border-white/10 shadow-lg">
                     <img
-                      src={selectedCert.certificateImage}
-                      alt={`Certificat ${selectedCert.title}`}
+                      src={getCurrentImage()}
+                      alt={
+                        activeImageIndex === 0
+                          ? `Certificat ${selectedCert.title}`
+                          : `Photo d'équipe ${activeImageIndex} - ${selectedCert.title}`
+                      }
                       className="w-full h-full object-contain"
                     />
+
+                    {/* Navigation arrows pour les photos multiples */}
+                    {selectedCert?.teamPhotos && (
+                      <>
+                        <button
+                          onClick={prevImage}
+                          className="absolute left-4 top-1/2 transform -translate-y-1/2 p-2 rounded-full bg-black/50 hover:bg-black/70 text-white transition-all duration-300"
+                        >
+                          <ChevronDown className="h-6 w-6 rotate-90" />
+                        </button>
+                        <button
+                          onClick={nextImage}
+                          className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 rounded-full bg-black/50 hover:bg-black/70 text-white transition-all duration-300"
+                        >
+                          <ChevronDown className="h-6 w-6 -rotate-90" />
+                        </button>
+
+                        {/* Indicateur de position */}
+                        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                          {[
+                            0,
+                            ...Array(selectedCert.additionalImages?.length || 0)
+                              .keys()
+                              .map((i) => i + 1),
+                          ].map((index) => (
+                            <div
+                              key={index}
+                              className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                                activeImageIndex === index
+                                  ? "bg-purple-500 scale-125"
+                                  : "bg-white/40"
+                              }`}
+                            />
+                          ))}
+                        </div>
+                      </>
+                    )}
+
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                       <a
-                        href={selectedCert.certificateImage}
+                        href={getCurrentImage()}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-white hover:text-purple-300 transition-colors"

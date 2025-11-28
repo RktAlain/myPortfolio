@@ -7,18 +7,18 @@ const Skills = () => {
     {
       title: "Data Science & BI",
       skills: [
-        { name: "Knime, Power BI", level: 90, color: "from-blue-500 to-cyan-500" },
-        { name: "Python, Auto ML ", level: 87, color: "from-green-500 to-teal-500" },
+        { name: "Knime, Power BI", level: 85, color: "from-blue-500 to-cyan-500" },
+        { name: "Python, SQL ", level: 80, color: "from-green-500 to-teal-500" },
         { name: "ETL, OLAP", level: 75, color: "from-purple-500 to-pink-500" },
-        { name: "Modélisation, I.A", level: 70, color: "from-orange-500 to-red-500" },
+        { name: "Auto ML, I.A", level: 70, color: "from-orange-500 to-red-500" },
       ]
     },
     {
       title: "Développement Web",
       skills: [
-        { name: "React, Node JS", level: 90, color: "from-indigo-500 to-purple-500" },
-        { name: "Java Spring", level: 85, color: "from-yellow-500 to-orange-500" },
-        { name: "Python Django", level: 90, color: "from-pink-500 to-rose-500" },
+        { name: "React, Node JS", level: 80, color: "from-indigo-500 to-purple-500" },
+        { name: "Java Spring", level: 75, color: "from-yellow-500 to-orange-500" },
+        { name: "Python Django", level: 80, color: "from-pink-500 to-rose-500" },
         { name: "PHP Laravel", level: 65, color: "from-emerald-500 to-teal-500" },
       ]
     },
@@ -37,7 +37,7 @@ const Skills = () => {
         { name: "MySQL, SQLite", level: 90, color: "from-cyan-500 to-blue-500" },
         { name: "PostgreSQL", level: 85, color: "from-green-500 to-emerald-500" },
         { name: "MongoDB", level: 75, color: "from-orange-500 to-amber-500" },
-        { name: "Git/GitHub", level: 88, color: "from-blue-500 to-indigo-500" },
+        { name: "Git/GitHub/Gitlab", level: 88, color: "from-blue-500 to-indigo-500" },
       ]
     }
   ];
@@ -183,7 +183,7 @@ const Skills = () => {
             <div className="absolute -inset-1 bg-[conic-gradient(from_90deg_at_50%_50%,#805ad5_0%,#d53f8c_50%,#805ad5_100%)] opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
             <h3 className="text-2xl font-bold text-white mb-4 relative z-10">Design & Outils</h3>
             <ul className="text-gray-300 space-y-2 relative z-10">
-              {["Figma, Canva", "UML, Scrum, Merise II", "Lucidchart"].map((tool, i) => (
+              {["Figma, Canva", "UML, Merise II"].map((tool, i) => (
                 <motion.li 
                   key={i}
                   initial={{ x: -20, opacity: 0 }}
