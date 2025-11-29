@@ -71,7 +71,7 @@ const Projects = () => {
     {
       title: "Stage chez Computer Store Fianarantsoa",
       description: "En vue de mon passage en 3ème année de licence - Création d'une application Desktop pour la gestion des Services Après-vente.",
-      technologies: ["Desktop App", "Java", "Swing", "Gestion SAV"],
+      technologies: ["Desktop App", "Java", "FX", "Gestion SAV"],
       icon: Code,
       gradient: "from-emerald-600 to-teal-600",
       features: ["Application desktop", "Gestion SAV", "Interface utilisateur", "Base de données"],
