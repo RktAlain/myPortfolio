@@ -94,17 +94,6 @@ const Certifications = () => {
       color: "from-blue-500 to-indigo-600",
       certificateImage: "summercode.webp",
     },
-    {
-      title: "Attestation Formation Cybersécurité",
-      institution: "Cisco",
-      date: "2021",
-      type: "Attestation",
-      description:
-        "Formation en ligne sur les fondamentaux de la cybersécurité",
-      status: "Obtenu",
-      color: "from-red-500 to-pink-600",
-      certificateImage: "cisco.png",
-    },
   ];
 
   const visibleCertifications = showAll

@@ -18,7 +18,7 @@ const Projects = () => {
       technologies: ["OLAP", "AutoML", "Python", "Power BI"],
       icon: Brain,
       gradient: "from-yellow-600 to-orange-600",
-      features: ["Vue Descriptive", "Vue prédictive", "Vue comparatice"],
+      features: ["Vue Descriptive", "Vue prédictive", "Vue comparative", "Memoire"],
       year: "2024-2025",
       demoLink: "",
       codeLink: null,
@@ -27,7 +27,8 @@ const Projects = () => {
       images: [
         "/desc.png",
         "/vuepred.png",
-        "/vuecomp.png"
+        "/vuecomp.png",
+        "/couv.png"
       ]
     },
     {
@@ -43,7 +44,7 @@ const Projects = () => {
       codeMessage: "Code inaccessible"
     },
     {
-      title: "Participation au Hackathon Recrutement Access Développement HUB (Organisé par AccèsBanque)",
+      title: "Projet d'équipe / Hackathon – Gestion des achats en entreprise",
       description: "Hackathon de recrutement - Réinvention du processus d'achat de matériel dans une entreprise.",
       technologies: ["Processus d'achat", "Gestion d'entreprise", "Automatisation", "React TS", "Python Django"],
       icon: ShoppingCart,
@@ -195,7 +196,7 @@ const Projects = () => {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Expériences <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Professionnelles</span>
+            Expériences & <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Projets</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-600 mx-auto mb-8"></div>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
