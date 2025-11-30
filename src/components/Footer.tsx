@@ -48,7 +48,7 @@ const Footer = () => {
               <span className="text-purple-400">R</span>AKOTOMALALA
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              BI Analyst, Data Scientist et Développeur Fullstack passionné par
+              BI Analyst, Data Scientist et Développeur passionné par
               l'innovation technologique. Spécialisé en Data et Intelligence
               Artificielle.
             </p>

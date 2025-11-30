@@ -162,9 +162,8 @@ const About = () => {
                 Artificielle.
               </p>
               <p className="text-gray-300 leading-relaxed">
-                Spécialiste en innovation technologique, je mets à profit mon
-                expertise en analyse de données et en développement
-                d’applications pour concevoir des solutions digitales
+                Spécialiste en Data et Développement, je mets à profit mon
+                expertise pour concevoir des solutions digitales
                 performantes, intuitives et orientées vers l’aide à la décision.
               </p>
             </div>

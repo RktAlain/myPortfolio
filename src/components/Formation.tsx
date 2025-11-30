@@ -15,9 +15,9 @@ const Formation = () => {
       icon: BarChart4
     },
     {
-      title: "Première année de master en informatique",
-      institution: "EMIT",
-      period: "2025",
+      title: "Master I en informatique",
+      institution: "Ecole de Management et d'Innovation Technologique",
+      period: "2024 - 2025",
       location: "Fianarantsoa, Madagascar",
       specialization: "Sciences de Données et Intelligence Artificielle",
       description: "Formation avancée en Data Science, Machine Learning et développement d'applications intelligentes",
@@ -25,19 +25,9 @@ const Formation = () => {
       icon: BrainCircuit
     },
     {
-      title: "Licence professionnelle (Troisième année) en informatique",
-      institution: "EMIT",
-      period: "2024",
-      location: "Fianarantsoa, Madagascar",
-      specialization: "Obtention du diplôme de licence",
-      description: "Formation complète en développement informatique",
-      color: "from-purple-500 to-pink-600",
-      icon: GraduationCap
-    },
-    {
       title: "Diplôme DELF B2",
-      institution: "Alliance Française",
-      period: "2024",
+      institution: "Alliance Française de Fianarantsoa, Madagascar",
+      period: "2023 - 2024",
       location: "Fianarantsoa, Madagascar",
       specialization: "Français Langue Étrangère",
       description: "Acquisition de compétence en langue française niveau B2",
@@ -45,39 +35,19 @@ const Formation = () => {
       icon: Award
     },
     {
-      title: "Deuxième année de licence en informatique",
-      institution: "EMIT",
-      period: "2023",
+      title: "Licence en informatique",
+      institution: "Ecole de Management et d'Innovation Technologique",
+      period: "2021 - 2024",
       location: "Fianarantsoa, Madagascar",
-      specialization: "Développement d'Application Internet/Intranet",
-      description: "Approfondissement des connaissances en programmation et développement d'application",
-      color: "from-cyan-500 to-blue-600",
-      icon: Code
-    },
-    {
-      title: "Première année de licence en informatique",
-      institution: "EMIT",
-      period: "2022",
-      location: "Fianarantsoa, Madagascar",
-      specialization: "Développement d'Application Internet/Intranet",
-      description: "Bases fondamentales de l'informatique et introduction au développement",
-      color: "from-indigo-500 to-purple-600",
-      icon: Code
-    },
-    {
-      title: "Formation en Cybersécurité",
-      institution: "Cisco",
-      period: "2021",
-      location: "Formation en ligne",
-      specialization: "Attestation de fin de formation",
-      description: "Formation sur les fondamentaux de la cybersécurité et protection des systèmes",
-      color: "from-red-500 to-pink-600",
-      icon: Trophy
+      specialization: "Obtention du diplôme de licence",
+      description: "Formation complète en développement informatique",
+      color: "from-purple-500 to-pink-600",
+      icon: GraduationCap
     },
     {
       title: "Baccalauréat série D",
-      institution: "Collège Privé Houssen Memorial School",
-      period: "2020",
+      institution: "Collège Privé Houssen Memorial School Toliara, Madagascar",
+      period: "2019 - 2020",
       location: "Toliara, Madagascar",
       specialization: "Sciences et Technologies",
       description: "Diplôme de fin d'études secondaires avec spécialisation scientifique",
@@ -91,11 +61,11 @@ const Formation = () => {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Parcours <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Académique</span>
+            Parcours & <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Formations</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-600 mx-auto mb-8"></div>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Mon parcours académique et mes expériences professionnelles
+            Mon parcours académique et mes formations
           </p>
         </div>
 
@@ -103,7 +73,7 @@ const Formation = () => {
         <div className="mb-16">
           <h3 className="text-3xl font-bold text-white mb-8 flex items-center">
             <GraduationCap className="mr-3 h-8 w-8 text-purple-400" />
-            Formation Académique
+            Formations
           </h3>
           <div className="space-y-8">
             {formations.map((formation, index) => {
