@@ -41,7 +41,7 @@ const Certifications = () => {
       certificateImage: "airtel.jpg",
     },
     {
-      title: "Certificat Hackathon EMIHACK 3.0",
+      title: "Certificat Hackathon Emihack 3.0 (Hackaton interne de l'EMIT)",
       institution: "EMIT",
       date: "2025",
       type: "Certificat",
@@ -84,7 +84,7 @@ const Certifications = () => {
       certificateImage: "delf.jpg",
     },
     {
-      title: "Certificat de Participation au Summer-code",
+      title: "Certificat de Participation au Summer-code (Hackaton en ligne de l'EMIT)",
       institution: "EMIT",
       date: "2021 - 2022",
       type: "Certificat",

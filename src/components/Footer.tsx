@@ -120,7 +120,7 @@ const Footer = () => {
             <div className="text-gray-400 text-sm inline-block">
               {" "}
               {/* inline-block pour que le centrage fonctionne */}©{" "}
-              {currentYear} RAKOTOMALALA Solohery Alain. Tous droits réservés.
+              {currentYear} Solohery Alain RAKOTOMALALA. Tous droits réservés.
             </div>
           </div>
         </div>

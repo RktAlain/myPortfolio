@@ -18,7 +18,7 @@ const Projects = () => {
       technologies: ["OLAP", "AutoML", "Python", "Power BI"],
       icon: Brain,
       gradient: "from-yellow-600 to-orange-600",
-      features: ["Vue Descriptive", "Vue prédictive", "Vue comparative", "Memoire"],
+      features: ["Vue Descriptive", "Vue prédictive", "Vue comparative"],
       year: "2024-2025",
       demoLink: "",
       codeLink: null,
@@ -28,7 +28,6 @@ const Projects = () => {
         "/desc.png",
         "/vuepred.png",
         "/vuecomp.png",
-        "/couv.png"
       ]
     },
     {
@@ -44,12 +43,12 @@ const Projects = () => {
       codeMessage: "Code inaccessible"
     },
     {
-      title: "Projet d'équipe / Hackathon – Gestion des achats en entreprise",
-      description: "Hackathon de recrutement - Réinvention du processus d'achat de matériel dans une entreprise.",
+      title: "Projet d'équipe – Gestion des achats en entreprise",
+      description: "Réinvention du processus d'achat de matériel dans une entreprise.",
       technologies: ["Processus d'achat", "Gestion d'entreprise", "Automatisation", "React TS", "Python Django"],
       icon: ShoppingCart,
       gradient: "from-green-600 to-blue-600",
-      features: ["Refonte processus achat", "Solution entreprise", "Innovation digitale", "Hackathon recrutement"],
+      features: ["Refonte processus achat", "Solution entreprise", "Innovation digitale"],
       year: "2024-2025",
       demoLink: "https://accessachat.onrender.com",
       codeLink: null,
@@ -77,19 +76,6 @@ const Projects = () => {
       features: ["Application desktop", "Gestion SAV", "Interface utilisateur", "Base de données"],
       year: "2022-2023",
       demoLink: "https://www.mediafire.com/file/urxeltu15rv8al7/Application.rar/file",
-      codeLink: null,
-      codeMessage: "Code inaccessible",
-      demoMessage: "Lien indisponible"
-    },
-    {
-      title: "Participation au Summer-code",
-      description: "Hackathon en ligne de l'EMIT - Création d'une application web statique d'un portfolio et de la lutte contre le feu de brousse. Concours Algorithme en ligne en utilisant la plateforme HackerRank.",
-      technologies: ["HTML", "CSS", "JavaScript", "Algorithmes"],
-      icon: Brain,
-      gradient: "from-red-600 to-pink-600",
-      features: ["Portfolio web", "Lutte anti-incendie", "Algorithmes", "Développement web"],
-      year: "2021-2022",
-      demoLink: null,
       codeLink: null,
       codeMessage: "Code inaccessible",
       demoMessage: "Lien indisponible"
