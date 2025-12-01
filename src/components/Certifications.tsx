@@ -30,7 +30,7 @@ const Certifications = () => {
       certificateImage: "data_science.jpg",
     },
     {
-      title: "Diplôme de participation de leadership pour les jeunes",
+      title: "Diplôme de participation de leadership pour les jeunes (Maxwell leadership)",
       institution: "Airtel Madagascar",
       date: "2025",
       type: "Diplôme",
@@ -65,7 +65,7 @@ const Certifications = () => {
     {
       title: "Diplôme de Licence professionnelle en informatique",
       institution: "EMIT",
-      date: "2022 - 2024",
+      date: "2025",
       type: "Diplôme",
       description:
         "Maîtrise de React, Node.js, Java Spring Boot, PHP Laravel, Python Django et bases de données",
@@ -76,7 +76,7 @@ const Certifications = () => {
     {
       title: "Diplôme DELF B2",
       institution: "Alliance Française",
-      date: "2023 - 2024",
+      date: "2024",
       type: "Diplôme",
       description: "Maîtrise de la langue française",
       status: "Obtenu",
@@ -84,15 +84,15 @@ const Certifications = () => {
       certificateImage: "delf.jpg",
     },
     {
-      title: "Certificat de Participation au Summer-code (Hackaton en ligne de l'EMIT)",
-      institution: "EMIT",
-      date: "2021 - 2022",
-      type: "Certificat",
+      title: "Baccalauréat série D",
+      institution: "Collège Privé Houssen Memorial School",
+      date: "2021",
+      type: "Diplôme",
       description:
-        "Maîtrise du HTML/CSS/JS et HackerRank - Création d'une application web statique et Concours Algorithme en équipe",
+        "Diplôme de fin d'études secondaires",
       status: "Obtenu",
-      color: "from-blue-500 to-indigo-600",
-      certificateImage: "summercode.webp",
+      color: "from-purple-500 to-pink-600",
+      certificateImage: "bacc.jpg",
     },
   ];
 

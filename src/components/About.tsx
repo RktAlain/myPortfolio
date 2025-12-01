@@ -155,9 +155,9 @@ const About = () => {
                 Mon Parcours
               </h3>
               <p className="text-gray-300 leading-relaxed mb-4">
-                Diplômé de l'Ecole de Management et d'Innovation Technologique
-                (EMIT) de Fianarantsoa en Développement d'Applications avec
-                spécialisation en systèmes Internet/Intranet, je poursuis
+                Diplômé en licence de l'Ecole de Management et d'Innovation Technologique
+                (EMIT) de Fianarantsoa en informatique avec
+                spécialisation en Développement d'Applications, je poursuis
                 actuellement un Master en Sciences des Données et Intelligence
                 Artificielle.
               </p>

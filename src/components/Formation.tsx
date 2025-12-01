@@ -5,11 +5,11 @@ import { GraduationCap, Calendar, MapPin, Users, Trophy, Code, Award, BarChart4,
 const Formation = () => {
   const formations = [
     {
-      title: "Formation en Data Scientist",
+      title: "Formation en Data Science",
       institution: "IDEA Academy",
-      period: "2025",
+      period: "2024 - 2025",
       location: "Fianarantsoa, Madagascar",
-      specialization: "Attestation de formation",
+      specialization: "Science de données",
       description: "Acquisition de compétences avancées en Data Science",
       color: "from-fuchsia-500 to-purple-600",
       icon: BarChart4
@@ -26,7 +26,7 @@ const Formation = () => {
     },
     {
       title: "Diplôme DELF B2",
-      institution: "Alliance Française de Fianarantsoa, Madagascar",
+      institution: "Alliance Française",
       period: "2023 - 2024",
       location: "Fianarantsoa, Madagascar",
       specialization: "Français Langue Étrangère",
@@ -39,14 +39,14 @@ const Formation = () => {
       institution: "Ecole de Management et d'Innovation Technologique",
       period: "2021 - 2024",
       location: "Fianarantsoa, Madagascar",
-      specialization: "Obtention du diplôme de licence",
+      specialization: "Développement d'Applications Internet/Intranet",
       description: "Formation complète en développement informatique",
       color: "from-purple-500 to-pink-600",
       icon: GraduationCap
     },
     {
       title: "Baccalauréat série D",
-      institution: "Collège Privé Houssen Memorial School Toliara, Madagascar",
+      institution: "Collège Privé Houssen Memorial School",
       period: "2019 - 2020",
       location: "Toliara, Madagascar",
       specialization: "Sciences et Technologies",
