@@ -155,11 +155,7 @@ const About = () => {
                 Mon Parcours
               </h3>
               <p className="text-gray-300 leading-relaxed mb-4">
-                Diplômé en licence de l'Ecole de Management et d'Innovation Technologique
-                (EMIT) de Fianarantsoa en informatique avec
-                spécialisation en Développement d'Applications, je poursuis
-                actuellement un Master en Sciences des Données et Intelligence
-                Artificielle.
+              Diplômé d’une licence en informatique, spécialité Développement d’Applications, obtenue à l’École de Management et d’Innovation Technologique (EMIT) de Fianarantsoa, je suis actuellement en Master 2 en Sciences des Données et Intelligence Artificielle.
               </p>
               <p className="text-gray-300 leading-relaxed">
                 Spécialiste en Data et Développement, je mets à profit mon

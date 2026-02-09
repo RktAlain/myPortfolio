@@ -5,6 +5,16 @@ import { GraduationCap, Calendar, MapPin, Users, Trophy, Code, Award, BarChart4,
 const Formation = () => {
   const formations = [
     {
+      title: "Master en informatique",
+      institution: "Ecole de Management et d'Innovation Technologique",
+      period: "2024 - 2026",
+      location: "Fianarantsoa, Madagascar",
+      specialization: "Sciences de Données et Intelligence Artificielle",
+      description: "Formation avancée en Data Science, Machine Learning et développement d'applications intelligentes",
+      color: "from-blue-500 to-indigo-600",
+      icon: BrainCircuit
+    },
+    {
       title: "Formation en Data Science",
       institution: "IDEA Academy",
       period: "2024 - 2025",
@@ -13,16 +23,6 @@ const Formation = () => {
       description: "Acquisition de compétences avancées en Data Science",
       color: "from-fuchsia-500 to-purple-600",
       icon: BarChart4
-    },
-    {
-      title: "Master I en informatique",
-      institution: "Ecole de Management et d'Innovation Technologique",
-      period: "2024 - 2025",
-      location: "Fianarantsoa, Madagascar",
-      specialization: "Sciences de Données et Intelligence Artificielle",
-      description: "Formation avancée en Data Science, Machine Learning et développement d'applications intelligentes",
-      color: "from-blue-500 to-indigo-600",
-      icon: BrainCircuit
     },
     {
       title: "Diplôme DELF B2",
