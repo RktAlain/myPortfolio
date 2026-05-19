@@ -48,9 +48,8 @@ const Footer = () => {
               <span className="text-purple-400">R</span>AKOTOMALALA
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              BI Analyst, Data Scientist et Développeur passionné par
-              l'innovation technologique. Spécialisé en Data et Intelligence
-              Artificielle.
+              Rigoureux, autonome et doté d’un excellent sens relationnel,
+               je m’adapte rapidement et suis capable de travailler efficacement en équipe.
             </p>
             <div className="space-y-2 text-gray-400">
               <div className="flex items-center">

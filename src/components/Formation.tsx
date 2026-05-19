@@ -1,6 +1,16 @@
-import React from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { GraduationCap, Calendar, MapPin, Users, Trophy, Code, Award, BarChart4, BrainCircuit } from 'lucide-react';
+import React from "react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  GraduationCap,
+  Calendar,
+  MapPin,
+  Users,
+  Trophy,
+  Code,
+  Award,
+  BarChart4,
+  BrainCircuit,
+} from "lucide-react";
 
 const Formation = () => {
   const formations = [
@@ -10,9 +20,20 @@ const Formation = () => {
       period: "2024 - 2026",
       location: "Fianarantsoa, Madagascar",
       specialization: "Sciences de Données et Intelligence Artificielle",
-      description: "Formation avancée en Data Science, Machine Learning et développement d'applications intelligentes",
+      description:
+        "Formation avancée en Data Science, Machine Learning et développement d'applications intelligentes",
       color: "from-blue-500 to-indigo-600",
-      icon: BrainCircuit
+      icon: BrainCircuit,
+    },
+    {
+      title: "Formation en Anglais",
+      institution: "ITTI Madagascar",
+      period: "2025 - 2026",
+      location: "Fianarantsoa, Madagascar",
+      specialization: "Anglais Langue Étrangère",
+      description: "Acquisition de compétence en langue Anglaise",
+      color: "from-green-500 to-emerald-600",
+      icon: Award,
     },
     {
       title: "Formation en Data Science",
@@ -22,7 +43,7 @@ const Formation = () => {
       specialization: "Science de données",
       description: "Acquisition de compétences avancées en Data Science",
       color: "from-fuchsia-500 to-purple-600",
-      icon: BarChart4
+      icon: BarChart4,
     },
     {
       title: "Diplôme DELF B2",
@@ -32,7 +53,7 @@ const Formation = () => {
       specialization: "Français Langue Étrangère",
       description: "Acquisition de compétence en langue française niveau B2",
       color: "from-green-500 to-emerald-600",
-      icon: Award
+      icon: Award,
     },
     {
       title: "Licence en informatique",
@@ -42,7 +63,7 @@ const Formation = () => {
       specialization: "Développement d'Applications Internet/Intranet",
       description: "Formation complète en développement informatique",
       color: "from-purple-500 to-pink-600",
-      icon: GraduationCap
+      icon: GraduationCap,
     },
     {
       title: "Baccalauréat série D",
@@ -50,10 +71,11 @@ const Formation = () => {
       period: "2019 - 2020",
       location: "Toliara, Madagascar",
       specialization: "Sciences et Technologies",
-      description: "Diplôme de fin d'études secondaires avec spécialisation scientifique",
+      description:
+        "Diplôme de fin d'études secondaires avec spécialisation scientifique",
       color: "from-yellow-500 to-orange-600",
-      icon: Trophy
-    }
+      icon: Trophy,
+    },
   ];
 
   return (
@@ -61,7 +83,10 @@ const Formation = () => {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Parcours & <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Formations</span>
+            Parcours &{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+              Formations
+            </span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-600 mx-auto mb-8"></div>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
@@ -79,17 +104,24 @@ const Formation = () => {
             {formations.map((formation, index) => {
               const IconComponent = formation.icon;
               return (
-                <Card key={index} className="bg-white/5 border-white/10 hover:bg-white/10 transition-all duration-500 transform hover:scale-[1.02] group">
+                <Card
+                  key={index}
+                  className="bg-white/5 border-white/10 hover:bg-white/10 transition-all duration-500 transform hover:scale-[1.02] group"
+                >
                   <CardHeader className="pb-4">
                     <div className="flex items-start space-x-4">
-                      <div className={`p-4 rounded-full bg-gradient-to-r ${formation.color} transform group-hover:rotate-12 transition-transform duration-300`}>
+                      <div
+                        className={`p-4 rounded-full bg-gradient-to-r ${formation.color} transform group-hover:rotate-12 transition-transform duration-300`}
+                      >
                         <IconComponent className="h-6 w-6 text-white" />
                       </div>
                       <div className="flex-1">
                         <CardTitle className="text-white text-xl group-hover:text-purple-300 transition-colors">
                           {formation.title}
                         </CardTitle>
-                        <p className="text-purple-400 font-medium text-lg">{formation.institution}</p>
+                        <p className="text-purple-400 font-medium text-lg">
+                          {formation.institution}
+                        </p>
                         <div className="flex items-center space-x-4 text-gray-400 text-sm mt-2">
                           <div className="flex items-center">
                             <Calendar className="h-4 w-4 mr-1" />
@@ -105,9 +137,13 @@ const Formation = () => {
                   </CardHeader>
                   <CardContent className="space-y-3">
                     <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 p-3 rounded-lg border border-purple-500/30">
-                      <p className="text-purple-300 font-medium">{formation.specialization}</p>
+                      <p className="text-purple-300 font-medium">
+                        {formation.specialization}
+                      </p>
                     </div>
-                    <p className="text-gray-300 leading-relaxed">{formation.description}</p>
+                    <p className="text-gray-300 leading-relaxed">
+                      {formation.description}
+                    </p>
                   </CardContent>
                 </Card>
               );

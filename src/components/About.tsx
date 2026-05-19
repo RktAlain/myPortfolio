@@ -158,7 +158,7 @@ const About = () => {
               Diplômé d’une licence en informatique, spécialité Développement d’Applications, obtenue à l’École de Management et d’Innovation Technologique (EMIT) de Fianarantsoa, je suis actuellement en Master 2 en Sciences des Données et Intelligence Artificielle.
               </p>
               <p className="text-gray-300 leading-relaxed">
-                Spécialiste en Data et Développement, je mets à profit mon
+                Spécialiste en analyse et traitement de données, je mets à profit mon
                 expertise pour concevoir des solutions digitales
                 performantes, intuitives et orientées vers l’aide à la décision.
               </p>
