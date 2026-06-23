@@ -26,12 +26,12 @@ const Formation = () => {
       icon: BrainCircuit,
     },
     {
-      title: "Formation en Anglais",
+      title: "Formation en langue anglaise",
       institution: "ITTI Madagascar",
       period: "2025 - 2026",
       location: "Fianarantsoa, Madagascar",
       specialization: "Anglais Langue Étrangère",
-      description: "Acquisition de compétence en langue Anglaise",
+      description: "Acquisition de compétence en langue Anglaise niveau C2",
       color: "from-green-500 to-emerald-600",
       icon: Award,
     },
@@ -46,7 +46,7 @@ const Formation = () => {
       icon: BarChart4,
     },
     {
-      title: "Diplôme DELF B2",
+      title: "Formation en langue française",
       institution: "Alliance Française",
       period: "2023 - 2024",
       location: "Fianarantsoa, Madagascar",

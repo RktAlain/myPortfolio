@@ -19,6 +19,17 @@ const Certifications = () => {
 
   const certifications = [
     {
+      title: "Attestation en Anglais C2",
+      institution: "ITTI Madagascar",
+      date: "2026",
+      type: "Attestation",
+      description:
+        "Maîtrise de la langue anglaise",
+      status: "Obtenu",
+      color: "from-green-500 to-emerald-600",
+      certificateImage: "itti.jpg",
+    },
+    {
       title: "Attestation en Data Science",
       institution: "IDEA Academy",
       date: "2025",
@@ -30,7 +41,8 @@ const Certifications = () => {
       certificateImage: "data_science.jpg",
     },
     {
-      title: "Diplôme de participation de leadership pour les jeunes (Maxwell leadership)",
+      title:
+        "Diplôme de participation de leadership pour les jeunes (Maxwell leadership)",
       institution: "Airtel Madagascar",
       date: "2025",
       type: "Diplôme",
@@ -88,8 +100,7 @@ const Certifications = () => {
       institution: "Collège Privé Houssen Memorial School",
       date: "2021",
       type: "Diplôme",
-      description:
-        "Diplôme de fin d'études secondaires",
+      description: "Diplôme de fin d'études secondaires",
       status: "Obtenu",
       color: "from-purple-500 to-pink-600",
       certificateImage: "bacc.jpg",
